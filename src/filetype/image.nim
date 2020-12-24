@@ -3,8 +3,7 @@
 ## * https://en.wikipedia.org/wiki/GIF GIF87a/GIF89a
 ##
 
-import sequtils
-import types
+import types, util
 
 const
   typeJpeg* = newFileType("image/jpeg", "jpg")
@@ -23,19 +22,14 @@ const
 
   magicNumberJpeg = @[0xff'u8, 0xd8, 0xff]
   magicNumberPng = @[0x89'u8, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]
-  magicNumberGif87a = toSeq("GIF87a".items).mapIt(it.byte)
-  magicNumberGif89a = toSeq("GIF89a".items).mapIt(it.byte)
-
-func check(buf, magicNumber: seq[byte]): bool =
-  if magicNumber.len <= buf.len:
-    let pref = buf[0..<magicNumber.len]
-    return pref == magicNumber
+  magicNumberGif87a = str2Bytes("GIF87a")
+  magicNumberGif89a = str2Bytes("GIF89a")
 
 func isJpeg*(buf: seq[byte]): bool =
-  check(buf, magicNumberJpeg)
+  checkMagicNumber(buf, magicNumberJpeg)
 
 func isPng*(buf: seq[byte]): bool =
-  check(buf, magicNumberPng)
+  checkMagicNumber(buf, magicNumberPng)
 
 func isGif*(buf: seq[byte]): bool =
-  check(buf, magicNumberGif87a) or check(buf, magicNumberGif89a)
+  checkMagicNumber(buf, magicNumberGif87a) or checkMagicNumber(buf, magicNumberGif89a)
