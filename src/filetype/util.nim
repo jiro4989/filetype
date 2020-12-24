@@ -6,4 +6,4 @@ func checkMagicNumber*(buf, magicNumber: seq[byte]): bool =
     return pref == magicNumber
 
 func str2Bytes*(s: string): seq[byte] =
-  toSeq("GIF87a".items).mapIt(it.byte)
+  toSeq(s.items).mapIt(it.byte)
