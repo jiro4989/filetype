@@ -1,5 +1,5 @@
 ====
-APPNAME
+filetype
 ====
 
 |nimble-version| |nimble-install| |gh-actions|
@@ -28,7 +28,7 @@ Installation
 
 .. code-block:: shell
 
-   $ nimble install -Y APPNAME
+   $ nimble install -Y filetype
 
 LICENSE
 =======
@@ -63,11 +63,11 @@ Config files are `.chglog <./.chglog>`_.
 
 Details, see `release.yml <./.github/workflows/release.yml>`_.
 
-.. |gh-actions| image:: https://github.com/jiro4989/APPNAME/workflows/test/badge.svg
-   :target: https://github.com/jiro4989/APPNAME/actions
-.. |nimble-version| image:: https://nimble.directory/ci/badges/APPNAME/version.svg
-   :target: https://nimble.directory/ci/badges/APPNAME/nimdevel/output.html
-.. |nimble-install| image:: https://nimble.directory/ci/badges/APPNAME/nimdevel/status.svg
-   :target: https://nimble.directory/ci/badges/APPNAME/nimdevel/output.html
+.. |gh-actions| image:: https://github.com/jiro4989/filetype/workflows/test/badge.svg
+   :target: https://github.com/jiro4989/filetype/actions
+.. |nimble-version| image:: https://nimble.directory/ci/badges/filetype/version.svg
+   :target: https://nimble.directory/ci/badges/filetype/nimdevel/output.html
+.. |nimble-install| image:: https://nimble.directory/ci/badges/filetype/nimdevel/status.svg
+   :target: https://nimble.directory/ci/badges/filetype/nimdevel/output.html
 
 .. |image-release-workflow| image:: https://user-images.githubusercontent.com/13825004/87944618-9897fc00-cada-11ea-9401-74167f04b5c4.png

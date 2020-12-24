@@ -1,6 +1,6 @@
 import unittest
 
-include APPNAME
+include filetype
 
 suite "suite":
   test "test":
