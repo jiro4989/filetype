@@ -27,6 +27,7 @@ const
   magicNumberGif89a = str2Bytes("GIF89a")
   magicNumberBmp = str2Bytes("BM")
   magicNumberJxr = @[0x49'u8, 0x49, 0xbc]
+  magicNumberPsd = @[0x38'u8, 0x42, 0x50, 0x53]
 
 func isJpeg*(buf: seq[byte]): bool =
   checkMagicNumber(buf, magicNumberJpeg)
@@ -42,4 +43,7 @@ func isBmp*(buf: seq[byte]): bool =
 
 func isJxr*(buf: seq[byte]): bool =
   checkMagicNumber(buf, magicNumberJxr)
+
+func isPsd*(buf: seq[byte]): bool =
+  checkMagicNumber(buf, magicNumberPsd)
 
