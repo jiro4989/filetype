@@ -31,27 +31,35 @@ const
   magicNumberIco = @[0x00'u8, 0x00, 0x01, 0x00]
   magicNumberDwg = @[0x41'u8, 0x43, 0x31, 0x30]
 
-func isJpeg*(buf: seq[byte]): bool =
-  checkMagicNumber(buf, magicNumberJpeg)
+genIsFormatFunc Jpeg
+genIsFormatFunc Png
+genIsFormatFunc Bmp
+genIsFormatFunc Jxr
+genIsFormatFunc Psd
+genIsFormatFunc Ico
+genIsFormatFunc Dwg
 
-func isPng*(buf: seq[byte]): bool =
-  checkMagicNumber(buf, magicNumberPng)
+# func isJpeg*(buf: seq[byte]): bool =
+#   checkMagicNumber(buf, magicNumberJpeg)
+# 
+# func isPng*(buf: seq[byte]): bool =
+#   checkMagicNumber(buf, magicNumberPng)
 
 func isGif*(buf: seq[byte]): bool =
   checkMagicNumber(buf, magicNumberGif87a) or checkMagicNumber(buf, magicNumberGif89a)
 
-func isBmp*(buf: seq[byte]): bool =
-  checkMagicNumber(buf, magicNumberBmp)
-
-func isJxr*(buf: seq[byte]): bool =
-  checkMagicNumber(buf, magicNumberJxr)
-
-func isPsd*(buf: seq[byte]): bool =
-  checkMagicNumber(buf, magicNumberPsd)
-
-func isIco*(buf: seq[byte]): bool =
-  checkMagicNumber(buf, magicNumberIco)
-
-func isDwg*(buf: seq[byte]): bool =
-  checkMagicNumber(buf, magicNumberDwg)
+# func isBmp*(buf: seq[byte]): bool =
+#   checkMagicNumber(buf, magicNumberBmp)
+# 
+# func isJxr*(buf: seq[byte]): bool =
+#   checkMagicNumber(buf, magicNumberJxr)
+# 
+# func isPsd*(buf: seq[byte]): bool =
+#   checkMagicNumber(buf, magicNumberPsd)
+# 
+# func isIco*(buf: seq[byte]): bool =
+#   checkMagicNumber(buf, magicNumberIco)
+# 
+# func isDwg*(buf: seq[byte]): bool =
+#   checkMagicNumber(buf, magicNumberDwg)
 
