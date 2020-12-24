@@ -1,7 +1,7 @@
 ## * https://en.wikipedia.org/wiki/JPEG ff d8 ff
 ## * https://en.wikipedia.org/wiki/Portable_Network_Graphics 89 50 4e 47 0d 0a 1a 0a
-## * https://en.wikipedia.org/wiki/GIF GIF87a/GIF89a
-##
+## * https://en.wikipedia.org/wiki/GIF "GIF87a/GIF89a"
+## * https://en.wikipedia.org/wiki/BMP_file_format "BM"
 
 import types, util
 
@@ -24,6 +24,7 @@ const
   magicNumberPng = @[0x89'u8, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]
   magicNumberGif87a = str2Bytes("GIF87a")
   magicNumberGif89a = str2Bytes("GIF89a")
+  magicNumberBmp = str2Bytes("BM")
 
 func isJpeg*(buf: seq[byte]): bool =
   checkMagicNumber(buf, magicNumberJpeg)
@@ -33,3 +34,6 @@ func isPng*(buf: seq[byte]): bool =
 
 func isGif*(buf: seq[byte]): bool =
   checkMagicNumber(buf, magicNumberGif87a) or checkMagicNumber(buf, magicNumberGif89a)
+func isBmp*(buf: seq[byte]): bool =
+  checkMagicNumber(buf, magicNumberBmp)
+
