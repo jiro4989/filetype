@@ -28,6 +28,7 @@ const
   magicNumberBmp = str2Bytes("BM")
   magicNumberJxr = @[0x49'u8, 0x49, 0xbc]
   magicNumberPsd = @[0x38'u8, 0x42, 0x50, 0x53]
+  magicNumberIco = @[0x00'u8, 0x00, 0x01, 0x00]
 
 func isJpeg*(buf: seq[byte]): bool =
   checkMagicNumber(buf, magicNumberJpeg)
@@ -46,4 +47,7 @@ func isJxr*(buf: seq[byte]): bool =
 
 func isPsd*(buf: seq[byte]): bool =
   checkMagicNumber(buf, magicNumberPsd)
+
+func isIco*(buf: seq[byte]): bool =
+  checkMagicNumber(buf, magicNumberIco)
 
