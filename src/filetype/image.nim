@@ -41,3 +41,15 @@ genIsFormatFunc Dwg
 
 func isGif*(buf: seq[byte]): bool =
   checkMagicNumber(buf, magicNumberGif87a) or checkMagicNumber(buf, magicNumberGif89a)
+var
+  imageMatcher* = @[
+    (typeJpeg, isJpeg),
+    (typePng, isPng),
+    (typeBmp, isBmp),
+    (typeJxr, isJxr),
+    (typePsd, isPsd),
+    (typeIco, isIco),
+    (typeDwg, isDwg),
+    (typePng, isPng),
+  ]
+
