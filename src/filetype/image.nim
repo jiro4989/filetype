@@ -1,6 +1,9 @@
 ## * https://en.wikipedia.org/wiki/JPEG ff d8 ff
 ## * https://en.wikipedia.org/wiki/Portable_Network_Graphics 89 50 4e 47 0d 0a 1a 0a
+## * https://en.wikipedia.org/wiki/GIF GIF87a/GIF89a
+##
 
+import sequtils
 import types
 
 const
@@ -20,6 +23,8 @@ const
 
   magicNumberJpeg = @[0xff'u8, 0xd8, 0xff]
   magicNumberPng = @[0x89'u8, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]
+  magicNumberGif87a = toSeq("GIF87a".items).mapIt(it.byte)
+  magicNumberGif89a = toSeq("GIF89a".items).mapIt(it.byte)
 
 func check(buf, magicNumber: seq[byte]): bool =
   if magicNumber.len <= buf.len:
@@ -31,3 +36,6 @@ func isJpeg*(buf: seq[byte]): bool =
 
 func isPng*(buf: seq[byte]): bool =
   check(buf, magicNumberPng)
+
+func isGif*(buf: seq[byte]): bool =
+  check(buf, magicNumberGif87a) or check(buf, magicNumberGif89a)
