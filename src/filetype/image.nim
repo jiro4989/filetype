@@ -39,27 +39,5 @@ genIsFormatFunc Psd
 genIsFormatFunc Ico
 genIsFormatFunc Dwg
 
-# func isJpeg*(buf: seq[byte]): bool =
-#   checkMagicNumber(buf, magicNumberJpeg)
-# 
-# func isPng*(buf: seq[byte]): bool =
-#   checkMagicNumber(buf, magicNumberPng)
-
 func isGif*(buf: seq[byte]): bool =
   checkMagicNumber(buf, magicNumberGif87a) or checkMagicNumber(buf, magicNumberGif89a)
-
-# func isBmp*(buf: seq[byte]): bool =
-#   checkMagicNumber(buf, magicNumberBmp)
-# 
-# func isJxr*(buf: seq[byte]): bool =
-#   checkMagicNumber(buf, magicNumberJxr)
-# 
-# func isPsd*(buf: seq[byte]): bool =
-#   checkMagicNumber(buf, magicNumberPsd)
-# 
-# func isIco*(buf: seq[byte]): bool =
-#   checkMagicNumber(buf, magicNumberIco)
-# 
-# func isDwg*(buf: seq[byte]): bool =
-#   checkMagicNumber(buf, magicNumberDwg)
-
