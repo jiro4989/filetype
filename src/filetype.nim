@@ -1,11 +1,5 @@
-type
-  FileType* = object
-    Mime*: MIME
-    Extension*: string
-  MIME* = object
-    Mime*: string
-    SubType*: string
-    Value*: string
+import filetype/types
+export types
 
 proc match*(buf: seq[byte]): FileType =
   discard
