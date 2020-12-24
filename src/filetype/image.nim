@@ -1,3 +1,6 @@
+## * https://en.wikipedia.org/wiki/JPEG ff d8 ff
+## * https://en.wikipedia.org/wiki/Portable_Network_Graphics 89 50 4e 47 0d 0a 1a 0a
+
 import types
 
 const
@@ -14,3 +17,17 @@ const
   typeIco* = newFileType("image/vnd.microsoft.icon", "ico")
   typeHeif* = newFileType("image/heif", "heif")
   typeDwg* = newFileType("image/vnd.dwg", "dwg")
+
+  magicNumberJpeg = @[0xff'u8, 0xd8, 0xff]
+  magicNumberPng = @[0x89'u8, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]
+
+func check(buf, magicNumber: seq[byte]): bool =
+  if magicNumber.len <= buf.len:
+    let pref = buf[0..<magicNumber.len]
+    return pref == magicNumber
+
+func isJpeg*(buf: seq[byte]): bool =
+  check(buf, magicNumberJpeg)
+
+func isPng*(buf: seq[byte]): bool =
+  check(buf, magicNumberPng)
