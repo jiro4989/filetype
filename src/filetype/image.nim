@@ -29,6 +29,7 @@ const
   magicNumberJxr = @[0x49'u8, 0x49, 0xbc]
   magicNumberPsd = @[0x38'u8, 0x42, 0x50, 0x53]
   magicNumberIco = @[0x00'u8, 0x00, 0x01, 0x00]
+  magicNumberDwg = @[0x41'u8, 0x43, 0x31, 0x30]
 
 func isJpeg*(buf: seq[byte]): bool =
   checkMagicNumber(buf, magicNumberJpeg)
@@ -50,4 +51,7 @@ func isPsd*(buf: seq[byte]): bool =
 
 func isIco*(buf: seq[byte]): bool =
   checkMagicNumber(buf, magicNumberIco)
+
+func isDwg*(buf: seq[byte]): bool =
+  checkMagicNumber(buf, magicNumberDwg)
 
