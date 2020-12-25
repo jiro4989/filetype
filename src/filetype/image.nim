@@ -39,7 +39,7 @@ genIsFormatFunc Psd
 genIsFormatFunc Ico
 genIsFormatFunc Dwg
 
-func isGif*(buf: seq[byte]): bool =
+func isGif*(buf: openArray[byte]): bool =
   checkMagicNumber(buf, magicNumberGif87a) or checkMagicNumber(buf, magicNumberGif89a)
 var
   imageMatcher* = @[

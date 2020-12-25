@@ -4,31 +4,27 @@ filetype
 
 |nimble-version| |nimble-install| |gh-actions|
 
-TODO
-
-This is a Nim project template.
-You must run command at first.
-
-.. code-block:: shell
-
-   nim c tool/setup.nim
-   tool/setup --author:<yourname> --appname:<application_name>
-
-This command replace and rename template strings of this repository.
+Small and dependency free Nim package to infer file and MIME type checking the magic numbers signature.
+filetype is heavily inspired by `h2non/filetype https://github.com/h2non/filetype`_.
 
 .. contents:: Table of contents
 
 Usage
 =====
 
-TODO
+.. code-block:: nim
+
+   import filetype
+
+   echo matchFile("sample.png").mime.value
+   # -> image/png
 
 Installation
 ============
 
 .. code-block:: shell
 
-   $ nimble install -Y filetype
+   $ nimble install -Y https://github.com/jiro4989/filetype
 
 LICENSE
 =======
