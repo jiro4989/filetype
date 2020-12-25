@@ -26,6 +26,21 @@ Installation
 
    $ nimble install -Y https://github.com/jiro4989/filetype
 
+Supported format
+================
+
+===== ======
+Type  Format
+===== ======
+Image JPEG
+Image PNG
+Image BMP
+Image JXR
+Image PSD
+Image ICO
+Image DWG
+===== ======
+
 LICENSE
 =======
 
