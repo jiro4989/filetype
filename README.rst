@@ -39,6 +39,7 @@ Image JXR
 Image PSD
 Image ICO
 Image DWG
+Image GIF
 ===== ======
 
 LICENSE

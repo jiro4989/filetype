@@ -50,6 +50,6 @@ var
     (typePsd, isPsd),
     (typeIco, isIco),
     (typeDwg, isDwg),
-    (typePng, isPng),
+    (typeGif, isGif),
   ]
 
