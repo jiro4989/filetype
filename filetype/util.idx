@@ -1,0 +1,3 @@
+checkMagicNumber	filetype/util.html#checkMagicNumber,seq[byte],seq[byte]	util: checkMagicNumber(buf, magicNumber: seq[byte]): bool	
+str2Bytes	filetype/util.html#str2Bytes,string	util: str2Bytes(s: string): seq[byte]	
+genIsFormatFunc	filetype/util.html#genIsFormatFunc.m,untyped	util: genIsFormatFunc(format: untyped): untyped	

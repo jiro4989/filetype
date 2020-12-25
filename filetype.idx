@@ -1,0 +1,1 @@
+match	filetype.html#match,seq[byte]	filetype: match(buf: seq[byte]): FileType	

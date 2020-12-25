@@ -1,0 +1,3 @@
+FileType	filetype/types.html#FileType	types: FileType	
+Mime	filetype/types.html#Mime	types: Mime	
+newFileType	filetype/types.html#newFileType,string,string	types: newFileType(mime, ext: string): FileType	
