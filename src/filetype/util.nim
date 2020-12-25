@@ -13,7 +13,7 @@ macro genIsFormatFunc*(format: untyped): untyped =
   let funcName = newIdentNode("is" & $format)
   let constName = newIdentNode("magicNumber" & $format)
   let arg = newIdentNode("buf")
-  let comment = newCommentStmtNode(&"Returns `buf` matches {format} image format magic number.")
+  let comment = newCommentStmtNode(&"Returns `buf` matches {format} format magic number.")
   quote do:
     func `funcName`*(`arg`: openArray[byte]): bool =
       `comment`
