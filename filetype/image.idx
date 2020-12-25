@@ -11,12 +11,12 @@ typePsd	filetype/image.html#typePsd	image: typePsd
 typeIco	filetype/image.html#typeIco	image: typeIco	
 typeHeif	filetype/image.html#typeHeif	image: typeHeif	
 typeDwg	filetype/image.html#typeDwg	image: typeDwg	
-isJpeg	filetype/image.html#isJpeg	image: isJpeg(buf: seq[byte]): bool	
-isPng	filetype/image.html#isPng	image: isPng(buf: seq[byte]): bool	
-isBmp	filetype/image.html#isBmp	image: isBmp(buf: seq[byte]): bool	
-isJxr	filetype/image.html#isJxr	image: isJxr(buf: seq[byte]): bool	
-isPsd	filetype/image.html#isPsd	image: isPsd(buf: seq[byte]): bool	
-isIco	filetype/image.html#isIco	image: isIco(buf: seq[byte]): bool	
-isDwg	filetype/image.html#isDwg	image: isDwg(buf: seq[byte]): bool	
-isGif	filetype/image.html#isGif,seq[byte]	image: isGif(buf: seq[byte]): bool	
+isJpeg	filetype/image.html#isJpeg	image: isJpeg(buf: openArray[byte]): bool	
+isPng	filetype/image.html#isPng	image: isPng(buf: openArray[byte]): bool	
+isBmp	filetype/image.html#isBmp	image: isBmp(buf: openArray[byte]): bool	
+isJxr	filetype/image.html#isJxr	image: isJxr(buf: openArray[byte]): bool	
+isPsd	filetype/image.html#isPsd	image: isPsd(buf: openArray[byte]): bool	
+isIco	filetype/image.html#isIco	image: isIco(buf: openArray[byte]): bool	
+isDwg	filetype/image.html#isDwg	image: isDwg(buf: openArray[byte]): bool	
+isGif	filetype/image.html#isGif,openArray[byte]	image: isGif(buf: openArray[byte]): bool	
 imageMatcher	filetype/image.html#imageMatcher	image: imageMatcher	

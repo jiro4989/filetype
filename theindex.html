@@ -66,7 +66,7 @@ function main() {
     Modules: <a href="filetype.html">filetype</a>, <a href="filetype/image.html">filetype/image</a>, <a href="filetype/types.html">filetype/types</a>, <a href="filetype/util.html">filetype/util</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="checkMagicNumber" href="#checkMagicNumber"><span>checkMagicNumber:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="util: checkMagicNumber(buf, magicNumber: seq[byte]): bool" href="filetype/util.html#checkMagicNumber%2Cseq%5Bbyte%5D%2Cseq%5Bbyte%5D">util: checkMagicNumber(buf, magicNumber: seq[byte]): bool</a></li>
+          data-doc-search-tag="util: checkMagicNumber(buf, magicNumber: openArray[byte]): bool" href="filetype/util.html#checkMagicNumber%2CopenArray%5Bbyte%5D%2CopenArray%5Bbyte%5D">util: checkMagicNumber(buf, magicNumber: openArray[byte]): bool</a></li>
           </ul></dd>
 <dt><a name="FileType" href="#FileType"><span>FileType:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -82,39 +82,43 @@ function main() {
           </ul></dd>
 <dt><a name="isBmp" href="#isBmp"><span>isBmp:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="image: isBmp(buf: seq[byte]): bool" href="filetype/image.html#isBmp">image: isBmp(buf: seq[byte]): bool</a></li>
+          data-doc-search-tag="image: isBmp(buf: openArray[byte]): bool" href="filetype/image.html#isBmp">image: isBmp(buf: openArray[byte]): bool</a></li>
           </ul></dd>
 <dt><a name="isDwg" href="#isDwg"><span>isDwg:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="image: isDwg(buf: seq[byte]): bool" href="filetype/image.html#isDwg">image: isDwg(buf: seq[byte]): bool</a></li>
+          data-doc-search-tag="image: isDwg(buf: openArray[byte]): bool" href="filetype/image.html#isDwg">image: isDwg(buf: openArray[byte]): bool</a></li>
           </ul></dd>
 <dt><a name="isGif" href="#isGif"><span>isGif:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="image: isGif(buf: seq[byte]): bool" href="filetype/image.html#isGif%2Cseq%5Bbyte%5D">image: isGif(buf: seq[byte]): bool</a></li>
+          data-doc-search-tag="image: isGif(buf: openArray[byte]): bool" href="filetype/image.html#isGif%2CopenArray%5Bbyte%5D">image: isGif(buf: openArray[byte]): bool</a></li>
           </ul></dd>
 <dt><a name="isIco" href="#isIco"><span>isIco:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="image: isIco(buf: seq[byte]): bool" href="filetype/image.html#isIco">image: isIco(buf: seq[byte]): bool</a></li>
+          data-doc-search-tag="image: isIco(buf: openArray[byte]): bool" href="filetype/image.html#isIco">image: isIco(buf: openArray[byte]): bool</a></li>
           </ul></dd>
 <dt><a name="isJpeg" href="#isJpeg"><span>isJpeg:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="image: isJpeg(buf: seq[byte]): bool" href="filetype/image.html#isJpeg">image: isJpeg(buf: seq[byte]): bool</a></li>
+          data-doc-search-tag="image: isJpeg(buf: openArray[byte]): bool" href="filetype/image.html#isJpeg">image: isJpeg(buf: openArray[byte]): bool</a></li>
           </ul></dd>
 <dt><a name="isJxr" href="#isJxr"><span>isJxr:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="image: isJxr(buf: seq[byte]): bool" href="filetype/image.html#isJxr">image: isJxr(buf: seq[byte]): bool</a></li>
+          data-doc-search-tag="image: isJxr(buf: openArray[byte]): bool" href="filetype/image.html#isJxr">image: isJxr(buf: openArray[byte]): bool</a></li>
           </ul></dd>
 <dt><a name="isPng" href="#isPng"><span>isPng:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="image: isPng(buf: seq[byte]): bool" href="filetype/image.html#isPng">image: isPng(buf: seq[byte]): bool</a></li>
+          data-doc-search-tag="image: isPng(buf: openArray[byte]): bool" href="filetype/image.html#isPng">image: isPng(buf: openArray[byte]): bool</a></li>
           </ul></dd>
 <dt><a name="isPsd" href="#isPsd"><span>isPsd:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="image: isPsd(buf: seq[byte]): bool" href="filetype/image.html#isPsd">image: isPsd(buf: seq[byte]): bool</a></li>
+          data-doc-search-tag="image: isPsd(buf: openArray[byte]): bool" href="filetype/image.html#isPsd">image: isPsd(buf: openArray[byte]): bool</a></li>
           </ul></dd>
 <dt><a name="match" href="#match"><span>match:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="filetype: match(buf: seq[byte]): FileType" href="filetype.html#match%2Cseq%5Bbyte%5D">filetype: match(buf: seq[byte]): FileType</a></li>
+          data-doc-search-tag="filetype: match(buf: openArray[byte]): FileType" href="filetype.html#match%2CopenArray%5Bbyte%5D">filetype: match(buf: openArray[byte]): FileType</a></li>
+          </ul></dd>
+<dt><a name="matchFile" href="#matchFile"><span>matchFile:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="filetype: matchFile(file: string): FileType" href="filetype.html#matchFile%2Cstring">filetype: matchFile(file: string): FileType</a></li>
           </ul></dd>
 <dt><a name="Mime" href="#Mime"><span>Mime:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -185,7 +189,7 @@ function main() {
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-25 00:02:42 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-25 00:27:42 UTC</small>
       </div>
     </div>
   </div>

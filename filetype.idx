@@ -1,1 +1,2 @@
-match	filetype.html#match,seq[byte]	filetype: match(buf: seq[byte]): FileType	
+match	filetype.html#match,openArray[byte]	filetype: match(buf: openArray[byte]): FileType	
+matchFile	filetype.html#matchFile,string	filetype: matchFile(file: string): FileType	
