@@ -139,7 +139,7 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#match%2CopenArray%5Bbyte%5D"><span class="Identifier">match</span></a><span class="Other">(</span><span class="Identifier">buf</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">byte</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="filetype/types.html#FileType"><span class="Identifier">FileType</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Returns a file type from matched magic number.
 
 </dd>
 <a id="matchFile,string"></a>
@@ -147,6 +147,8 @@ function main() {
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">WriteIOEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
+<p>Returns a file type from matched magic number. <tt class="docutils literal"><span class="pre">file</span></tt> is a file path.</p>
+<p><strong>Note:</strong> Not available for JS backend.</p>
 
 
 </dd>
@@ -165,7 +167,7 @@ function main() {
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-25 00:27:42 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-25 00:48:43 UTC</small>
       </div>
     </div>
   </div>
