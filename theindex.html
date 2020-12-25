@@ -63,8 +63,12 @@ function main() {
 <div class="document" id="documentId">
   <div class="container">
     <h1 class="title">Index</h1>
-    Modules: <a href="filetype.html">filetype</a>, <a href="filetype/image.html">filetype/image</a>, <a href="filetype/types.html">filetype/types</a>, <a href="filetype/util.html">filetype/util</a>.<br/><p /><h2>API symbols</h2>
-<dl><dt><a name="checkMagicNumber" href="#checkMagicNumber"><span>checkMagicNumber:</span></a></dt><dd><ul class="simple">
+    Modules: <a href="filetype.html">filetype</a>, <a href="filetype/archive.html">filetype/archive</a>, <a href="filetype/image.html">filetype/image</a>, <a href="filetype/types.html">filetype/types</a>, <a href="filetype/util.html">filetype/util</a>.<br/><p /><h2>API symbols</h2>
+<dl><dt><a name="archiveMatcher" href="#archiveMatcher"><span>archiveMatcher:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: archiveMatcher" href="filetype/archive.html#archiveMatcher">archive: archiveMatcher</a></li>
+          </ul></dd>
+<dt><a name="checkMagicNumber" href="#checkMagicNumber"><span>checkMagicNumber:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="util: checkMagicNumber(buf, magicNumber: openArray[byte]): bool" href="filetype/util.html#checkMagicNumber%2CopenArray%5Bbyte%5D%2CopenArray%5Bbyte%5D">util: checkMagicNumber(buf, magicNumber: openArray[byte]): bool</a></li>
           </ul></dd>
@@ -80,17 +84,49 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="image: imageMatcher" href="filetype/image.html#imageMatcher">image: imageMatcher</a></li>
           </ul></dd>
+<dt><a name="is7z" href="#is7z"><span>is7z:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: is7z(buf: openArray[byte]): bool" href="filetype/archive.html#is7z">archive: is7z(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isAr" href="#isAr"><span>isAr:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: isAr(buf: openArray[byte]): bool" href="filetype/archive.html#isAr">archive: isAr(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
 <dt><a name="isBmp" href="#isBmp"><span>isBmp:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: isBmp(buf: openArray[byte]): bool" href="filetype/image.html#isBmp">image: isBmp(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isBz2" href="#isBz2"><span>isBz2:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: isBz2(buf: openArray[byte]): bool" href="filetype/archive.html#isBz2">archive: isBz2(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isCrx" href="#isCrx"><span>isCrx:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: isCrx(buf: openArray[byte]): bool" href="filetype/archive.html#isCrx">archive: isCrx(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isDeb" href="#isDeb"><span>isDeb:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: isDeb(buf: openArray[byte]): bool" href="filetype/archive.html#isDeb">archive: isDeb(buf: openArray[byte]): bool</a></li>
           </ul></dd>
 <dt><a name="isDwg" href="#isDwg"><span>isDwg:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: isDwg(buf: openArray[byte]): bool" href="filetype/image.html#isDwg">image: isDwg(buf: openArray[byte]): bool</a></li>
           </ul></dd>
+<dt><a name="isElf" href="#isElf"><span>isElf:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: isElf(buf: openArray[byte]): bool" href="filetype/archive.html#isElf">archive: isElf(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isExe" href="#isExe"><span>isExe:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: isExe(buf: openArray[byte]): bool" href="filetype/archive.html#isExe">archive: isExe(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
 <dt><a name="isGif" href="#isGif"><span>isGif:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: isGif(buf: openArray[byte]): bool" href="filetype/image.html#isGif%2CopenArray%5Bbyte%5D">image: isGif(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isGz" href="#isGz"><span>isGz:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: isGz(buf: openArray[byte]): bool" href="filetype/archive.html#isGz">archive: isGz(buf: openArray[byte]): bool</a></li>
           </ul></dd>
 <dt><a name="isIco" href="#isIco"><span>isIco:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -104,13 +140,49 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="image: isJxr(buf: openArray[byte]): bool" href="filetype/image.html#isJxr">image: isJxr(buf: openArray[byte]): bool</a></li>
           </ul></dd>
+<dt><a name="isLz" href="#isLz"><span>isLz:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: isLz(buf: openArray[byte]): bool" href="filetype/archive.html#isLz">archive: isLz(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isNes" href="#isNes"><span>isNes:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: isNes(buf: openArray[byte]): bool" href="filetype/archive.html#isNes">archive: isNes(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isPdf" href="#isPdf"><span>isPdf:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: isPdf(buf: openArray[byte]): bool" href="filetype/archive.html#isPdf">archive: isPdf(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
 <dt><a name="isPng" href="#isPng"><span>isPng:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: isPng(buf: openArray[byte]): bool" href="filetype/image.html#isPng">image: isPng(buf: openArray[byte]): bool</a></li>
           </ul></dd>
+<dt><a name="isPs" href="#isPs"><span>isPs:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: isPs(buf: openArray[byte]): bool" href="filetype/archive.html#isPs">archive: isPs(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
 <dt><a name="isPsd" href="#isPsd"><span>isPsd:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: isPsd(buf: openArray[byte]): bool" href="filetype/image.html#isPsd">image: isPsd(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isRpm" href="#isRpm"><span>isRpm:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: isRpm(buf: openArray[byte]): bool" href="filetype/archive.html#isRpm">archive: isRpm(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isRtf" href="#isRtf"><span>isRtf:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: isRtf(buf: openArray[byte]): bool" href="filetype/archive.html#isRtf">archive: isRtf(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isSqlite" href="#isSqlite"><span>isSqlite:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: isSqlite(buf: openArray[byte]): bool" href="filetype/archive.html#isSqlite">archive: isSqlite(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isXz" href="#isXz"><span>isXz:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: isXz(buf: openArray[byte]): bool" href="filetype/archive.html#isXz">archive: isXz(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isZip" href="#isZip"><span>isZip:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: isZip(buf: openArray[byte]): bool" href="filetype/archive.html#isZip%2CopenArray%5Bbyte%5D">archive: isZip(buf: openArray[byte]): bool</a></li>
           </ul></dd>
 <dt><a name="match" href="#match"><span>match:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -132,21 +204,69 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="util: str2Bytes(s: string): seq[byte]" href="filetype/util.html#str2Bytes%2Cstring">util: str2Bytes(s: string): seq[byte]</a></li>
           </ul></dd>
+<dt><a name="type7z" href="#type7z"><span>type7z:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: type7z" href="filetype/archive.html#type7z">archive: type7z</a></li>
+          </ul></dd>
+<dt><a name="typeAr" href="#typeAr"><span>typeAr:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeAr" href="filetype/archive.html#typeAr">archive: typeAr</a></li>
+          </ul></dd>
 <dt><a name="typeBmp" href="#typeBmp"><span>typeBmp:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: typeBmp" href="filetype/image.html#typeBmp">image: typeBmp</a></li>
+          </ul></dd>
+<dt><a name="typeBz2" href="#typeBz2"><span>typeBz2:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeBz2" href="filetype/archive.html#typeBz2">archive: typeBz2</a></li>
+          </ul></dd>
+<dt><a name="typeCab" href="#typeCab"><span>typeCab:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeCab" href="filetype/archive.html#typeCab">archive: typeCab</a></li>
           </ul></dd>
 <dt><a name="typeCr2" href="#typeCr2"><span>typeCr2:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: typeCr2" href="filetype/image.html#typeCr2">image: typeCr2</a></li>
           </ul></dd>
+<dt><a name="typeCrx" href="#typeCrx"><span>typeCrx:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeCrx" href="filetype/archive.html#typeCrx">archive: typeCrx</a></li>
+          </ul></dd>
+<dt><a name="typeDcm" href="#typeDcm"><span>typeDcm:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeDcm" href="filetype/archive.html#typeDcm">archive: typeDcm</a></li>
+          </ul></dd>
+<dt><a name="typeDeb" href="#typeDeb"><span>typeDeb:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeDeb" href="filetype/archive.html#typeDeb">archive: typeDeb</a></li>
+          </ul></dd>
 <dt><a name="typeDwg" href="#typeDwg"><span>typeDwg:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: typeDwg" href="filetype/image.html#typeDwg">image: typeDwg</a></li>
           </ul></dd>
+<dt><a name="typeElf" href="#typeElf"><span>typeElf:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeElf" href="filetype/archive.html#typeElf">archive: typeElf</a></li>
+          </ul></dd>
+<dt><a name="typeEot" href="#typeEot"><span>typeEot:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeEot" href="filetype/archive.html#typeEot">archive: typeEot</a></li>
+          </ul></dd>
+<dt><a name="typeEpub" href="#typeEpub"><span>typeEpub:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeEpub" href="filetype/archive.html#typeEpub">archive: typeEpub</a></li>
+          </ul></dd>
+<dt><a name="typeExe" href="#typeExe"><span>typeExe:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeExe" href="filetype/archive.html#typeExe">archive: typeExe</a></li>
+          </ul></dd>
 <dt><a name="typeGif" href="#typeGif"><span>typeGif:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: typeGif" href="filetype/image.html#typeGif">image: typeGif</a></li>
+          </ul></dd>
+<dt><a name="typeGz" href="#typeGz"><span>typeGz:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeGz" href="filetype/archive.html#typeGz">archive: typeGz</a></li>
           </ul></dd>
 <dt><a name="typeHeif" href="#typeHeif"><span>typeHeif:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -155,6 +275,10 @@ function main() {
 <dt><a name="typeIco" href="#typeIco"><span>typeIco:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: typeIco" href="filetype/image.html#typeIco">image: typeIco</a></li>
+          </ul></dd>
+<dt><a name="typeIso" href="#typeIso"><span>typeIso:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeIso" href="filetype/archive.html#typeIso">archive: typeIso</a></li>
           </ul></dd>
 <dt><a name="typeJpeg" href="#typeJpeg"><span>typeJpeg:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -168,13 +292,57 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="image: typeJxr" href="filetype/image.html#typeJxr">image: typeJxr</a></li>
           </ul></dd>
+<dt><a name="typeLz" href="#typeLz"><span>typeLz:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeLz" href="filetype/archive.html#typeLz">archive: typeLz</a></li>
+          </ul></dd>
+<dt><a name="typeMachO" href="#typeMachO"><span>typeMachO:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeMachO" href="filetype/archive.html#typeMachO">archive: typeMachO</a></li>
+          </ul></dd>
+<dt><a name="typeNes" href="#typeNes"><span>typeNes:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeNes" href="filetype/archive.html#typeNes">archive: typeNes</a></li>
+          </ul></dd>
+<dt><a name="typePdf" href="#typePdf"><span>typePdf:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typePdf" href="filetype/archive.html#typePdf">archive: typePdf</a></li>
+          </ul></dd>
 <dt><a name="typePng" href="#typePng"><span>typePng:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: typePng" href="filetype/image.html#typePng">image: typePng</a></li>
           </ul></dd>
+<dt><a name="typePs" href="#typePs"><span>typePs:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typePs" href="filetype/archive.html#typePs">archive: typePs</a></li>
+          </ul></dd>
 <dt><a name="typePsd" href="#typePsd"><span>typePsd:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: typePsd" href="filetype/image.html#typePsd">image: typePsd</a></li>
+          </ul></dd>
+<dt><a name="typeRar" href="#typeRar"><span>typeRar:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeRar" href="filetype/archive.html#typeRar">archive: typeRar</a></li>
+          </ul></dd>
+<dt><a name="typeRpm" href="#typeRpm"><span>typeRpm:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeRpm" href="filetype/archive.html#typeRpm">archive: typeRpm</a></li>
+          </ul></dd>
+<dt><a name="typeRtf" href="#typeRtf"><span>typeRtf:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeRtf" href="filetype/archive.html#typeRtf">archive: typeRtf</a></li>
+          </ul></dd>
+<dt><a name="typeSqlite" href="#typeSqlite"><span>typeSqlite:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeSqlite" href="filetype/archive.html#typeSqlite">archive: typeSqlite</a></li>
+          </ul></dd>
+<dt><a name="typeSwf" href="#typeSwf"><span>typeSwf:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeSwf" href="filetype/archive.html#typeSwf">archive: typeSwf</a></li>
+          </ul></dd>
+<dt><a name="typeTar" href="#typeTar"><span>typeTar:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeTar" href="filetype/archive.html#typeTar">archive: typeTar</a></li>
           </ul></dd>
 <dt><a name="typeTiff" href="#typeTiff"><span>typeTiff:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -184,12 +352,24 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="image: typeWebp" href="filetype/image.html#typeWebp">image: typeWebp</a></li>
           </ul></dd>
+<dt><a name="typeXz" href="#typeXz"><span>typeXz:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeXz" href="filetype/archive.html#typeXz">archive: typeXz</a></li>
+          </ul></dd>
+<dt><a name="typeZ" href="#typeZ"><span>typeZ:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeZ" href="filetype/archive.html#typeZ">archive: typeZ</a></li>
+          </ul></dd>
+<dt><a name="typeZip" href="#typeZip"><span>typeZip:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="archive: typeZip" href="filetype/archive.html#typeZip">archive: typeZip</a></li>
+          </ul></dd>
 </dl>
     <div class="row">
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-25 00:48:43 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-25 17:16:27 UTC</small>
       </div>
     </div>
   </div>

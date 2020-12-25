@@ -1,0 +1,45 @@
+typeEpub	filetype/archive.html#typeEpub	archive: typeEpub	
+typeZip	filetype/archive.html#typeZip	archive: typeZip	
+typeTar	filetype/archive.html#typeTar	archive: typeTar	
+typeRar	filetype/archive.html#typeRar	archive: typeRar	
+typeGz	filetype/archive.html#typeGz	archive: typeGz	
+typeBz2	filetype/archive.html#typeBz2	archive: typeBz2	
+type7z	filetype/archive.html#type7z	archive: type7z	
+typeXz	filetype/archive.html#typeXz	archive: typeXz	
+typePdf	filetype/archive.html#typePdf	archive: typePdf	
+typeExe	filetype/archive.html#typeExe	archive: typeExe	
+typeSwf	filetype/archive.html#typeSwf	archive: typeSwf	
+typeRtf	filetype/archive.html#typeRtf	archive: typeRtf	
+typeEot	filetype/archive.html#typeEot	archive: typeEot	
+typePs	filetype/archive.html#typePs	archive: typePs	
+typeSqlite	filetype/archive.html#typeSqlite	archive: typeSqlite	
+typeNes	filetype/archive.html#typeNes	archive: typeNes	
+typeCrx	filetype/archive.html#typeCrx	archive: typeCrx	
+typeCab	filetype/archive.html#typeCab	archive: typeCab	
+typeDeb	filetype/archive.html#typeDeb	archive: typeDeb	
+typeAr	filetype/archive.html#typeAr	archive: typeAr	
+typeZ	filetype/archive.html#typeZ	archive: typeZ	
+typeLz	filetype/archive.html#typeLz	archive: typeLz	
+typeRpm	filetype/archive.html#typeRpm	archive: typeRpm	
+typeElf	filetype/archive.html#typeElf	archive: typeElf	
+typeDcm	filetype/archive.html#typeDcm	archive: typeDcm	
+typeIso	filetype/archive.html#typeIso	archive: typeIso	
+typeMachO	filetype/archive.html#typeMachO	archive: typeMachO	
+isGz	filetype/archive.html#isGz	archive: isGz(buf: openArray[byte]): bool	
+isBz2	filetype/archive.html#isBz2	archive: isBz2(buf: openArray[byte]): bool	
+is7z	filetype/archive.html#is7z	archive: is7z(buf: openArray[byte]): bool	
+isPdf	filetype/archive.html#isPdf	archive: isPdf(buf: openArray[byte]): bool	
+isExe	filetype/archive.html#isExe	archive: isExe(buf: openArray[byte]): bool	
+isRtf	filetype/archive.html#isRtf	archive: isRtf(buf: openArray[byte]): bool	
+isNes	filetype/archive.html#isNes	archive: isNes(buf: openArray[byte]): bool	
+isCrx	filetype/archive.html#isCrx	archive: isCrx(buf: openArray[byte]): bool	
+isPs	filetype/archive.html#isPs	archive: isPs(buf: openArray[byte]): bool	
+isXz	filetype/archive.html#isXz	archive: isXz(buf: openArray[byte]): bool	
+isSqlite	filetype/archive.html#isSqlite	archive: isSqlite(buf: openArray[byte]): bool	
+isDeb	filetype/archive.html#isDeb	archive: isDeb(buf: openArray[byte]): bool	
+isAr	filetype/archive.html#isAr	archive: isAr(buf: openArray[byte]): bool	
+isLz	filetype/archive.html#isLz	archive: isLz(buf: openArray[byte]): bool	
+isRpm	filetype/archive.html#isRpm	archive: isRpm(buf: openArray[byte]): bool	
+isElf	filetype/archive.html#isElf	archive: isElf(buf: openArray[byte]): bool	
+isZip	filetype/archive.html#isZip,openArray[byte]	archive: isZip(buf: openArray[byte]): bool	
+archiveMatcher	filetype/archive.html#archiveMatcher	archive: archiveMatcher	
