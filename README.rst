@@ -5,7 +5,7 @@ filetype
 |nimble-version| |nimble-install| |gh-actions|
 
 Small and dependency free Nim package to infer file and MIME type checking the magic numbers signature.
-filetype is heavily inspired by `h2non/filetype https://github.com/h2non/filetype`_.
+filetype is heavily inspired by `h2non/filetype <https://github.com/h2non/filetype>`_.
 
 .. contents:: Table of contents
 
