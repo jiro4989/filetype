@@ -1,12 +1,14 @@
-import filetype/[types, image]
+import filetype/[types, image, archive]
 export types
 
 proc match*(buf: openArray[byte]): FileType =
   ## Returns a file type from matched magic number.
-  for matcher in imageMatcher:
-    let matchFunc = matcher[1]
-    if buf.matchFunc:
-      return matcher[0]
+  const allMatchers = @[imageMatcher, archiveMatcher]
+  for matchers in allMatchers:
+    for matcher in matchers:
+      let matchFunc = matcher[1]
+      if buf.matchFunc:
+        return matcher[0]
 
 when not defined js:
   import streams

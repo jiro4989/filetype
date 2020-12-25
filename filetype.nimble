@@ -10,3 +10,6 @@ srcDir        = "src"
 # Dependencies
 
 requires "nim >= 1.4.0"
+
+task docs, "generate documents":
+  selfExec "doc --index:on --project --out:documents src/filetype.nim"
