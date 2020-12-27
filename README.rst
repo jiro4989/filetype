@@ -33,8 +33,8 @@ Supported format
 Type      Format
 =======   ======
 Image     jpeg, png, bmp, jxr, psd, ico, dwg, gif
-Archive   gz, zip, bz2, 7z, pdf, exe, rtf, nes, crx, ps, xz, sqlite, deb, ar, lz, rpm, elf,
-Audio     Midi, Ogg, Flac, Wav, Amr, Mp3, Aac,
+Archive   gz, zip, bz2, 7z, pdf, exe, rtf, nes, crx, ps, xz, sqlite, deb, ar, lz, rpm, elf
+Audio     midi, ogg, flac, wav, amr, mp3, aac
 =======   ======
 
 LICENSE
