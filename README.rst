@@ -29,18 +29,13 @@ Installation
 Supported format
 ================
 
-===== ======
-Type  Format
-===== ======
-Image JPEG
-Image PNG
-Image BMP
-Image JXR
-Image PSD
-Image ICO
-Image DWG
-Image GIF
-===== ======
+=======   ======
+Type      Format
+=======   ======
+Image     jpeg, png, bmp, jxr, psd, ico, dwg, gif
+Archive   gz, zip, bz2, 7z, pdf, exe, rtf, nes, crx, ps, xz, sqlite, deb, ar, lz, rpm, elf,
+Audio     Midi, Ogg, Flac, Wav, Amr, Mp3, Aac,
+=======   ======
 
 LICENSE
 =======
