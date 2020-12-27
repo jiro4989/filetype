@@ -97,12 +97,12 @@ function main() {
       <li><a class="reference" href="#FileType"
     title="FileType = object
   mime*: Mime
-  extension*: string">FileType</a></li>
+  extension*: string         ## File extension. (ex: `zip`)">FileType</a></li>
   <li><a class="reference" href="#Mime"
     title="Mime = object
-  typ*: string
-  subType*: string
-  value*: string">Mime</a></li>
+  typ*: string               ## Ex: `application` of `application/gzip`.
+  subType*: string           ## Ex: `gzip` of `application/gzip`.
+  value*: string             ## Ex: `application/gzip` of `application/gzip`.">Mime</a></li>
 
   </ul>
 </li>
@@ -131,8 +131,8 @@ function main() {
 <a id="FileType"></a>
 <dt><pre><a href="types.html#FileType"><span class="Identifier">FileType</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
   <span class="Identifier">mime</span><span class="Operator">*</span><span class="Other">:</span> <a href="types.html#Mime"><span class="Identifier">Mime</span></a>
-  <span class="Identifier">extension</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">string</span>
-</pre></dt>
+  <span class="Identifier">extension</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">string</span>         <span class="Comment">## File extension. (ex: `zip`)</span>
+  </pre></dt>
 <dd>
 
 
@@ -140,13 +140,13 @@ function main() {
 </dd>
 <a id="Mime"></a>
 <dt><pre><a href="types.html#Mime"><span class="Identifier">Mime</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
-  <span class="Identifier">typ</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">string</span>
-  <span class="Identifier">subType</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">string</span>
-  <span class="Identifier">value</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">string</span>
-</pre></dt>
+  <span class="Identifier">typ</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">string</span>               <span class="Comment">## Ex: `application` of `application/gzip`.</span>
+  <span class="Identifier">subType</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">string</span>           <span class="Comment">## Ex: `gzip` of `application/gzip`.</span>
+  <span class="Identifier">value</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">string</span>             <span class="Comment">## Ex: `application/gzip` of `application/gzip`.</span>
+  </pre></dt>
 <dd>
 
-
+MIME type.
 
 </dd>
 
@@ -171,7 +171,7 @@ function main() {
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-27 14:29:01 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-27 14:41:14 UTC</small>
       </div>
     </div>
   </div>
