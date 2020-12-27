@@ -3,11 +3,12 @@ import strutils
 type
   FileType* = object
     mime*: Mime
-    extension*: string
+    extension*: string ## File extension. (ex: `zip`)
   Mime* = object
-    typ*: string
-    subType*: string
-    value*: string
+    ## MIME type.
+    typ*: string     ## Ex: `application` of `application/gzip`.
+    subType*: string ## Ex: `gzip` of `application/gzip`.
+    value*: string   ## Ex: `application/gzip` of `application/gzip`.
 
 func newFileType*(mime, ext: string): FileType =
   let s = mime.split("/")
