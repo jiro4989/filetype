@@ -63,10 +63,14 @@ function main() {
 <div class="document" id="documentId">
   <div class="container">
     <h1 class="title">Index</h1>
-    Modules: <a href="filetype.html">filetype</a>, <a href="filetype/archive.html">filetype/archive</a>, <a href="filetype/image.html">filetype/image</a>, <a href="filetype/types.html">filetype/types</a>, <a href="filetype/util.html">filetype/util</a>.<br/><p /><h2>API symbols</h2>
+    Modules: <a href="filetype.html">filetype</a>, <a href="filetype/archive.html">filetype/archive</a>, <a href="filetype/audio.html">filetype/audio</a>, <a href="filetype/image.html">filetype/image</a>, <a href="filetype/types.html">filetype/types</a>, <a href="filetype/util.html">filetype/util</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="archiveMatcher" href="#archiveMatcher"><span>archiveMatcher:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="archive: archiveMatcher" href="filetype/archive.html#archiveMatcher">archive: archiveMatcher</a></li>
+          </ul></dd>
+<dt><a name="audioMatcher" href="#audioMatcher"><span>audioMatcher:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="audio: audioMatcher" href="filetype/audio.html#audioMatcher">audio: audioMatcher</a></li>
           </ul></dd>
 <dt><a name="checkMagicNumber" href="#checkMagicNumber"><span>checkMagicNumber:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -87,6 +91,14 @@ function main() {
 <dt><a name="is7z" href="#is7z"><span>is7z:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="archive: is7z(buf: openArray[byte]): bool" href="filetype/archive.html#is7z">archive: is7z(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isAac" href="#isAac"><span>isAac:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="audio: isAac(buf: openArray[byte]): bool" href="filetype/audio.html#isAac%2CopenArray%5Bbyte%5D">audio: isAac(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isAmr" href="#isAmr"><span>isAmr:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="audio: isAmr(buf: openArray[byte]): bool" href="filetype/audio.html#isAmr">audio: isAmr(buf: openArray[byte]): bool</a></li>
           </ul></dd>
 <dt><a name="isAr" href="#isAr"><span>isAr:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -120,6 +132,10 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="archive: isExe(buf: openArray[byte]): bool" href="filetype/archive.html#isExe">archive: isExe(buf: openArray[byte]): bool</a></li>
           </ul></dd>
+<dt><a name="isFlac" href="#isFlac"><span>isFlac:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="audio: isFlac(buf: openArray[byte]): bool" href="filetype/audio.html#isFlac">audio: isFlac(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
 <dt><a name="isGif" href="#isGif"><span>isGif:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: isGif(buf: openArray[byte]): bool" href="filetype/image.html#isGif%2CopenArray%5Bbyte%5D">image: isGif(buf: openArray[byte]): bool</a></li>
@@ -144,9 +160,21 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="archive: isLz(buf: openArray[byte]): bool" href="filetype/archive.html#isLz">archive: isLz(buf: openArray[byte]): bool</a></li>
           </ul></dd>
+<dt><a name="isMidi" href="#isMidi"><span>isMidi:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="audio: isMidi(buf: openArray[byte]): bool" href="filetype/audio.html#isMidi">audio: isMidi(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isMp3" href="#isMp3"><span>isMp3:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="audio: isMp3(buf: openArray[byte]): bool" href="filetype/audio.html#isMp3%2CopenArray%5Bbyte%5D">audio: isMp3(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
 <dt><a name="isNes" href="#isNes"><span>isNes:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="archive: isNes(buf: openArray[byte]): bool" href="filetype/archive.html#isNes">archive: isNes(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isOgg" href="#isOgg"><span>isOgg:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="audio: isOgg(buf: openArray[byte]): bool" href="filetype/audio.html#isOgg">audio: isOgg(buf: openArray[byte]): bool</a></li>
           </ul></dd>
 <dt><a name="isPdf" href="#isPdf"><span>isPdf:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -175,6 +203,10 @@ function main() {
 <dt><a name="isSqlite" href="#isSqlite"><span>isSqlite:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="archive: isSqlite(buf: openArray[byte]): bool" href="filetype/archive.html#isSqlite">archive: isSqlite(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isWav" href="#isWav"><span>isWav:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="audio: isWav(buf: openArray[byte]): bool" href="filetype/audio.html#isWav%2CopenArray%5Bbyte%5D">audio: isWav(buf: openArray[byte]): bool</a></li>
           </ul></dd>
 <dt><a name="isXz" href="#isXz"><span>isXz:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -207,6 +239,14 @@ function main() {
 <dt><a name="type7z" href="#type7z"><span>type7z:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="archive: type7z" href="filetype/archive.html#type7z">archive: type7z</a></li>
+          </ul></dd>
+<dt><a name="typeAac" href="#typeAac"><span>typeAac:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="audio: typeAac" href="filetype/audio.html#typeAac">audio: typeAac</a></li>
+          </ul></dd>
+<dt><a name="typeAmr" href="#typeAmr"><span>typeAmr:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="audio: typeAmr" href="filetype/audio.html#typeAmr">audio: typeAmr</a></li>
           </ul></dd>
 <dt><a name="typeAr" href="#typeAr"><span>typeAr:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -260,6 +300,10 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="archive: typeExe" href="filetype/archive.html#typeExe">archive: typeExe</a></li>
           </ul></dd>
+<dt><a name="typeFlac" href="#typeFlac"><span>typeFlac:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="audio: typeFlac" href="filetype/audio.html#typeFlac">audio: typeFlac</a></li>
+          </ul></dd>
 <dt><a name="typeGif" href="#typeGif"><span>typeGif:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: typeGif" href="filetype/image.html#typeGif">image: typeGif</a></li>
@@ -296,13 +340,29 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="archive: typeLz" href="filetype/archive.html#typeLz">archive: typeLz</a></li>
           </ul></dd>
+<dt><a name="typeM4a" href="#typeM4a"><span>typeM4a:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="audio: typeM4a" href="filetype/audio.html#typeM4a">audio: typeM4a</a></li>
+          </ul></dd>
 <dt><a name="typeMachO" href="#typeMachO"><span>typeMachO:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="archive: typeMachO" href="filetype/archive.html#typeMachO">archive: typeMachO</a></li>
           </ul></dd>
+<dt><a name="typeMidi" href="#typeMidi"><span>typeMidi:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="audio: typeMidi" href="filetype/audio.html#typeMidi">audio: typeMidi</a></li>
+          </ul></dd>
+<dt><a name="typeMp3" href="#typeMp3"><span>typeMp3:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="audio: typeMp3" href="filetype/audio.html#typeMp3">audio: typeMp3</a></li>
+          </ul></dd>
 <dt><a name="typeNes" href="#typeNes"><span>typeNes:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="archive: typeNes" href="filetype/archive.html#typeNes">archive: typeNes</a></li>
+          </ul></dd>
+<dt><a name="typeOgg" href="#typeOgg"><span>typeOgg:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="audio: typeOgg" href="filetype/audio.html#typeOgg">audio: typeOgg</a></li>
           </ul></dd>
 <dt><a name="typePdf" href="#typePdf"><span>typePdf:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -348,6 +408,10 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="image: typeTiff" href="filetype/image.html#typeTiff">image: typeTiff</a></li>
           </ul></dd>
+<dt><a name="typeWav" href="#typeWav"><span>typeWav:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="audio: typeWav" href="filetype/audio.html#typeWav">audio: typeWav</a></li>
+          </ul></dd>
 <dt><a name="typeWebp" href="#typeWebp"><span>typeWebp:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: typeWebp" href="filetype/image.html#typeWebp">image: typeWebp</a></li>
@@ -369,7 +433,7 @@ function main() {
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-25 17:16:27 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-27 14:29:01 UTC</small>
       </div>
     </div>
   </div>

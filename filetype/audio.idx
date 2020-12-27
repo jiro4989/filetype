@@ -1,0 +1,16 @@
+typeMidi	filetype/audio.html#typeMidi	audio: typeMidi	
+typeMp3	filetype/audio.html#typeMp3	audio: typeMp3	
+typeM4a	filetype/audio.html#typeM4a	audio: typeM4a	
+typeOgg	filetype/audio.html#typeOgg	audio: typeOgg	
+typeFlac	filetype/audio.html#typeFlac	audio: typeFlac	
+typeWav	filetype/audio.html#typeWav	audio: typeWav	
+typeAmr	filetype/audio.html#typeAmr	audio: typeAmr	
+typeAac	filetype/audio.html#typeAac	audio: typeAac	
+isMp3	filetype/audio.html#isMp3,openArray[byte]	audio: isMp3(buf: openArray[byte]): bool	
+isAac	filetype/audio.html#isAac,openArray[byte]	audio: isAac(buf: openArray[byte]): bool	
+isWav	filetype/audio.html#isWav,openArray[byte]	audio: isWav(buf: openArray[byte]): bool	
+isMidi	filetype/audio.html#isMidi	audio: isMidi(buf: openArray[byte]): bool	
+isOgg	filetype/audio.html#isOgg	audio: isOgg(buf: openArray[byte]): bool	
+isFlac	filetype/audio.html#isFlac	audio: isFlac(buf: openArray[byte]): bool	
+isAmr	filetype/audio.html#isAmr	audio: isAmr(buf: openArray[byte]): bool	
+audioMatcher	filetype/audio.html#audioMatcher	audio: audioMatcher	
