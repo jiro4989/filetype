@@ -12,3 +12,5 @@ suite "proc matchFile":
   test "gif": check matchFile(testDataDir/"sample.gif").mime.value == "image/gif"
   test "gzip": check matchFile(testDataDir/"sample.gz").mime.value == "application/gzip"
   test "zip": check matchFile(testDataDir/"sample.zip").mime.value == "application/zip"
+  test "midi": check matchFile(testDataDir/"sample.mid").mime.value == "audio/midi"
+  test "wav": check matchFile(testDataDir/"sample.wav").mime.value == "audio/x-wav"
