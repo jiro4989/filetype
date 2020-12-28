@@ -1,0 +1,9 @@
+typeWoff	filetype/font.html#typeWoff	font: typeWoff	
+typeWoff2	filetype/font.html#typeWoff2	font: typeWoff2	
+typeTtf	filetype/font.html#typeTtf	font: typeTtf	
+typeOtf	filetype/font.html#typeOtf	font: typeOtf	
+isWoff	filetype/font.html#isWoff	font: isWoff(buf: openArray[byte]): bool	
+isWoff2	filetype/font.html#isWoff2	font: isWoff2(buf: openArray[byte]): bool	
+isTtf	filetype/font.html#isTtf	font: isTtf(buf: openArray[byte]): bool	
+isOtf	filetype/font.html#isOtf	font: isOtf(buf: openArray[byte]): bool	
+fontMatcher	filetype/font.html#fontMatcher	font: fontMatcher	

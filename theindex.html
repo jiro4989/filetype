@@ -63,7 +63,7 @@ function main() {
 <div class="document" id="documentId">
   <div class="container">
     <h1 class="title">Index</h1>
-    Modules: <a href="filetype.html">filetype</a>, <a href="filetype/archive.html">filetype/archive</a>, <a href="filetype/audio.html">filetype/audio</a>, <a href="filetype/image.html">filetype/image</a>, <a href="filetype/types.html">filetype/types</a>, <a href="filetype/util.html">filetype/util</a>.<br/><p /><h2>API symbols</h2>
+    Modules: <a href="filetype.html">filetype</a>, <a href="filetype/archive.html">filetype/archive</a>, <a href="filetype/audio.html">filetype/audio</a>, <a href="filetype/font.html">filetype/font</a>, <a href="filetype/image.html">filetype/image</a>, <a href="filetype/types.html">filetype/types</a>, <a href="filetype/util.html">filetype/util</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="archiveMatcher" href="#archiveMatcher"><span>archiveMatcher:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="archive: archiveMatcher" href="filetype/archive.html#archiveMatcher">archive: archiveMatcher</a></li>
@@ -79,6 +79,10 @@ function main() {
 <dt><a name="FileType" href="#FileType"><span>FileType:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="types: FileType" href="filetype/types.html#FileType">types: FileType</a></li>
+          </ul></dd>
+<dt><a name="fontMatcher" href="#fontMatcher"><span>fontMatcher:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="font: fontMatcher" href="filetype/font.html#fontMatcher">font: fontMatcher</a></li>
           </ul></dd>
 <dt><a name="genIsFormatFunc" href="#genIsFormatFunc"><span>genIsFormatFunc:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -176,6 +180,10 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="audio: isOgg(buf: openArray[byte]): bool" href="filetype/audio.html#isOgg">audio: isOgg(buf: openArray[byte]): bool</a></li>
           </ul></dd>
+<dt><a name="isOtf" href="#isOtf"><span>isOtf:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="font: isOtf(buf: openArray[byte]): bool" href="filetype/font.html#isOtf">font: isOtf(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
 <dt><a name="isPdf" href="#isPdf"><span>isPdf:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="archive: isPdf(buf: openArray[byte]): bool" href="filetype/archive.html#isPdf">archive: isPdf(buf: openArray[byte]): bool</a></li>
@@ -204,9 +212,21 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="archive: isSqlite(buf: openArray[byte]): bool" href="filetype/archive.html#isSqlite">archive: isSqlite(buf: openArray[byte]): bool</a></li>
           </ul></dd>
+<dt><a name="isTtf" href="#isTtf"><span>isTtf:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="font: isTtf(buf: openArray[byte]): bool" href="filetype/font.html#isTtf">font: isTtf(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
 <dt><a name="isWav" href="#isWav"><span>isWav:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="audio: isWav(buf: openArray[byte]): bool" href="filetype/audio.html#isWav%2CopenArray%5Bbyte%5D">audio: isWav(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isWoff" href="#isWoff"><span>isWoff:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="font: isWoff(buf: openArray[byte]): bool" href="filetype/font.html#isWoff">font: isWoff(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isWoff2" href="#isWoff2"><span>isWoff2:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="font: isWoff2(buf: openArray[byte]): bool" href="filetype/font.html#isWoff2">font: isWoff2(buf: openArray[byte]): bool</a></li>
           </ul></dd>
 <dt><a name="isXz" href="#isXz"><span>isXz:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -364,6 +384,10 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="audio: typeOgg" href="filetype/audio.html#typeOgg">audio: typeOgg</a></li>
           </ul></dd>
+<dt><a name="typeOtf" href="#typeOtf"><span>typeOtf:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="font: typeOtf" href="filetype/font.html#typeOtf">font: typeOtf</a></li>
+          </ul></dd>
 <dt><a name="typePdf" href="#typePdf"><span>typePdf:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="archive: typePdf" href="filetype/archive.html#typePdf">archive: typePdf</a></li>
@@ -408,6 +432,10 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="image: typeTiff" href="filetype/image.html#typeTiff">image: typeTiff</a></li>
           </ul></dd>
+<dt><a name="typeTtf" href="#typeTtf"><span>typeTtf:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="font: typeTtf" href="filetype/font.html#typeTtf">font: typeTtf</a></li>
+          </ul></dd>
 <dt><a name="typeWav" href="#typeWav"><span>typeWav:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="audio: typeWav" href="filetype/audio.html#typeWav">audio: typeWav</a></li>
@@ -415,6 +443,14 @@ function main() {
 <dt><a name="typeWebp" href="#typeWebp"><span>typeWebp:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: typeWebp" href="filetype/image.html#typeWebp">image: typeWebp</a></li>
+          </ul></dd>
+<dt><a name="typeWoff" href="#typeWoff"><span>typeWoff:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="font: typeWoff" href="filetype/font.html#typeWoff">font: typeWoff</a></li>
+          </ul></dd>
+<dt><a name="typeWoff2" href="#typeWoff2"><span>typeWoff2:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="font: typeWoff2" href="filetype/font.html#typeWoff2">font: typeWoff2</a></li>
           </ul></dd>
 <dt><a name="typeXz" href="#typeXz"><span>typeXz:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -433,7 +469,7 @@ function main() {
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-27 14:41:14 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-28 13:43:15 UTC</small>
       </div>
     </div>
   </div>
