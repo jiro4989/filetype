@@ -1,9 +1,9 @@
-import filetype/[types, image, archive, audio, font]
+import filetype/[types, image, archive, audio, font, video]
 export types
 
 proc match*(buf: openArray[byte]): FileType =
   ## Returns a file type from matched magic number.
-  const allMatchers = @[imageMatcher, archiveMatcher, audioMatcher, fontMatcher]
+  const allMatchers = @[imageMatcher, archiveMatcher, audioMatcher, fontMatcher, videoMatcher]
   for matchers in allMatchers:
     for matcher in matchers:
       let matchFunc = matcher[1]
