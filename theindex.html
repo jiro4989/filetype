@@ -63,7 +63,7 @@ function main() {
 <div class="document" id="documentId">
   <div class="container">
     <h1 class="title">Index</h1>
-    Modules: <a href="filetype.html">filetype</a>, <a href="filetype/archive.html">filetype/archive</a>, <a href="filetype/audio.html">filetype/audio</a>, <a href="filetype/font.html">filetype/font</a>, <a href="filetype/image.html">filetype/image</a>, <a href="filetype/types.html">filetype/types</a>, <a href="filetype/util.html">filetype/util</a>.<br/><p /><h2>API symbols</h2>
+    Modules: <a href="filetype.html">filetype</a>, <a href="filetype/archive.html">filetype/archive</a>, <a href="filetype/audio.html">filetype/audio</a>, <a href="filetype/font.html">filetype/font</a>, <a href="filetype/image.html">filetype/image</a>, <a href="filetype/types.html">filetype/types</a>, <a href="filetype/util.html">filetype/util</a>, <a href="filetype/video.html">filetype/video</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="archiveMatcher" href="#archiveMatcher"><span>archiveMatcher:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="archive: archiveMatcher" href="filetype/archive.html#archiveMatcher">archive: archiveMatcher</a></li>
@@ -108,6 +108,10 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="archive: isAr(buf: openArray[byte]): bool" href="filetype/archive.html#isAr">archive: isAr(buf: openArray[byte]): bool</a></li>
           </ul></dd>
+<dt><a name="isAvi" href="#isAvi"><span>isAvi:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="video: isAvi(buf: openArray[byte]): bool" href="filetype/video.html#isAvi%2CopenArray%5Bbyte%5D">video: isAvi(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
 <dt><a name="isBmp" href="#isBmp"><span>isBmp:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: isBmp(buf: openArray[byte]): bool" href="filetype/image.html#isBmp">image: isBmp(buf: openArray[byte]): bool</a></li>
@@ -140,6 +144,10 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="audio: isFlac(buf: openArray[byte]): bool" href="filetype/audio.html#isFlac">audio: isFlac(buf: openArray[byte]): bool</a></li>
           </ul></dd>
+<dt><a name="isFlv" href="#isFlv"><span>isFlv:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="video: isFlv(buf: openArray[byte]): bool" href="filetype/video.html#isFlv">video: isFlv(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
 <dt><a name="isGif" href="#isGif"><span>isGif:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: isGif(buf: openArray[byte]): bool" href="filetype/image.html#isGif%2CopenArray%5Bbyte%5D">image: isGif(buf: openArray[byte]): bool</a></li>
@@ -171,6 +179,14 @@ function main() {
 <dt><a name="isMp3" href="#isMp3"><span>isMp3:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="audio: isMp3(buf: openArray[byte]): bool" href="filetype/audio.html#isMp3%2CopenArray%5Bbyte%5D">audio: isMp3(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isMp4" href="#isMp4"><span>isMp4:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="video: isMp4(buf: openArray[byte]): bool" href="filetype/video.html#isMp4%2CopenArray%5Bbyte%5D">video: isMp4(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
+<dt><a name="isMpeg" href="#isMpeg"><span>isMpeg:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="video: isMpeg(buf: openArray[byte]): bool" href="filetype/video.html#isMpeg%2CopenArray%5Bbyte%5D">video: isMpeg(buf: openArray[byte]): bool</a></li>
           </ul></dd>
 <dt><a name="isNes" href="#isNes"><span>isNes:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -220,6 +236,10 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="audio: isWav(buf: openArray[byte]): bool" href="filetype/audio.html#isWav%2CopenArray%5Bbyte%5D">audio: isWav(buf: openArray[byte]): bool</a></li>
           </ul></dd>
+<dt><a name="isWmv" href="#isWmv"><span>isWmv:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="video: isWmv(buf: openArray[byte]): bool" href="filetype/video.html#isWmv">video: isWmv(buf: openArray[byte]): bool</a></li>
+          </ul></dd>
 <dt><a name="isWoff" href="#isWoff"><span>isWoff:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="font: isWoff(buf: openArray[byte]): bool" href="filetype/font.html#isWoff">font: isWoff(buf: openArray[byte]): bool</a></li>
@@ -256,6 +276,10 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="util: str2Bytes(s: string): seq[byte]" href="filetype/util.html#str2Bytes%2Cstring">util: str2Bytes(s: string): seq[byte]</a></li>
           </ul></dd>
+<dt><a name="type3gp" href="#type3gp"><span>type3gp:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="video: type3gp" href="filetype/video.html#type3gp">video: type3gp</a></li>
+          </ul></dd>
 <dt><a name="type7z" href="#type7z"><span>type7z:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="archive: type7z" href="filetype/archive.html#type7z">archive: type7z</a></li>
@@ -271,6 +295,10 @@ function main() {
 <dt><a name="typeAr" href="#typeAr"><span>typeAr:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="archive: typeAr" href="filetype/archive.html#typeAr">archive: typeAr</a></li>
+          </ul></dd>
+<dt><a name="typeAvi" href="#typeAvi"><span>typeAvi:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="video: typeAvi" href="filetype/video.html#typeAvi">video: typeAvi</a></li>
           </ul></dd>
 <dt><a name="typeBmp" href="#typeBmp"><span>typeBmp:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -324,6 +352,10 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="audio: typeFlac" href="filetype/audio.html#typeFlac">audio: typeFlac</a></li>
           </ul></dd>
+<dt><a name="typeFlv" href="#typeFlv"><span>typeFlv:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="video: typeFlv" href="filetype/video.html#typeFlv">video: typeFlv</a></li>
+          </ul></dd>
 <dt><a name="typeGif" href="#typeGif"><span>typeGif:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: typeGif" href="filetype/image.html#typeGif">image: typeGif</a></li>
@@ -364,6 +396,10 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="audio: typeM4a" href="filetype/audio.html#typeM4a">audio: typeM4a</a></li>
           </ul></dd>
+<dt><a name="typeM4v" href="#typeM4v"><span>typeM4v:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="video: typeM4v" href="filetype/video.html#typeM4v">video: typeM4v</a></li>
+          </ul></dd>
 <dt><a name="typeMachO" href="#typeMachO"><span>typeMachO:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="archive: typeMachO" href="filetype/archive.html#typeMachO">archive: typeMachO</a></li>
@@ -372,9 +408,25 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="audio: typeMidi" href="filetype/audio.html#typeMidi">audio: typeMidi</a></li>
           </ul></dd>
+<dt><a name="typeMkv" href="#typeMkv"><span>typeMkv:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="video: typeMkv" href="filetype/video.html#typeMkv">video: typeMkv</a></li>
+          </ul></dd>
+<dt><a name="typeMov" href="#typeMov"><span>typeMov:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="video: typeMov" href="filetype/video.html#typeMov">video: typeMov</a></li>
+          </ul></dd>
 <dt><a name="typeMp3" href="#typeMp3"><span>typeMp3:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="audio: typeMp3" href="filetype/audio.html#typeMp3">audio: typeMp3</a></li>
+          </ul></dd>
+<dt><a name="typeMp4" href="#typeMp4"><span>typeMp4:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="video: typeMp4" href="filetype/video.html#typeMp4">video: typeMp4</a></li>
+          </ul></dd>
+<dt><a name="typeMpeg" href="#typeMpeg"><span>typeMpeg:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="video: typeMpeg" href="filetype/video.html#typeMpeg">video: typeMpeg</a></li>
           </ul></dd>
 <dt><a name="typeNes" href="#typeNes"><span>typeNes:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -440,9 +492,17 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="audio: typeWav" href="filetype/audio.html#typeWav">audio: typeWav</a></li>
           </ul></dd>
+<dt><a name="typeWebm" href="#typeWebm"><span>typeWebm:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="video: typeWebm" href="filetype/video.html#typeWebm">video: typeWebm</a></li>
+          </ul></dd>
 <dt><a name="typeWebp" href="#typeWebp"><span>typeWebp:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: typeWebp" href="filetype/image.html#typeWebp">image: typeWebp</a></li>
+          </ul></dd>
+<dt><a name="typeWmv" href="#typeWmv"><span>typeWmv:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="video: typeWmv" href="filetype/video.html#typeWmv">video: typeWmv</a></li>
           </ul></dd>
 <dt><a name="typeWoff" href="#typeWoff"><span>typeWoff:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -464,12 +524,16 @@ function main() {
 <li><a class="reference external"
           data-doc-search-tag="archive: typeZip" href="filetype/archive.html#typeZip">archive: typeZip</a></li>
           </ul></dd>
+<dt><a name="videoMatcher" href="#videoMatcher"><span>videoMatcher:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="video: videoMatcher" href="filetype/video.html#videoMatcher">video: videoMatcher</a></li>
+          </ul></dd>
 </dl>
     <div class="row">
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-28 13:43:15 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-31 14:27:32 UTC</small>
       </div>
     </div>
   </div>

@@ -1,0 +1,16 @@
+typeMp4	filetype/video.html#typeMp4	video: typeMp4	
+typeM4v	filetype/video.html#typeM4v	video: typeM4v	
+typeMkv	filetype/video.html#typeMkv	video: typeMkv	
+typeWebm	filetype/video.html#typeWebm	video: typeWebm	
+typeMov	filetype/video.html#typeMov	video: typeMov	
+typeAvi	filetype/video.html#typeAvi	video: typeAvi	
+typeWmv	filetype/video.html#typeWmv	video: typeWmv	
+typeMpeg	filetype/video.html#typeMpeg	video: typeMpeg	
+typeFlv	filetype/video.html#typeFlv	video: typeFlv	
+type3gp	filetype/video.html#type3gp	video: type3gp	
+isWmv	filetype/video.html#isWmv	video: isWmv(buf: openArray[byte]): bool	
+isFlv	filetype/video.html#isFlv	video: isFlv(buf: openArray[byte]): bool	
+isAvi	filetype/video.html#isAvi,openArray[byte]	video: isAvi(buf: openArray[byte]): bool	
+isMpeg	filetype/video.html#isMpeg,openArray[byte]	video: isMpeg(buf: openArray[byte]): bool	
+isMp4	filetype/video.html#isMp4,openArray[byte]	video: isMp4(buf: openArray[byte]): bool	
+videoMatcher	filetype/video.html#videoMatcher	video: videoMatcher	
