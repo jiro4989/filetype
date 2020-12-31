@@ -1,0 +1,3 @@
+checkMagicNumber	filetype/private/util.html#checkMagicNumber,openArray[byte],openArray[byte]	util: checkMagicNumber(buf, magicNumber: openArray[byte]): bool	
+str2Bytes	filetype/private/util.html#str2Bytes,string	util: str2Bytes(s: string): seq[byte]	
+generateFunc	filetype/private/util.html#generateFunc.m,untyped	util: generateFunc(format: untyped): untyped	
