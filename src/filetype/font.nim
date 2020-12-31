@@ -11,10 +11,10 @@ const
   magicNumberTtf = @[0x00'u8, 0x01, 0x00, 0x00, 0x00]
   magicNumberOtf = @[0x4f'u8, 0x54, 0x54, 0x4f, 0x00]
 
-genIsFormatFunc Woff
-genIsFormatFunc Woff2
-genIsFormatFunc Ttf
-genIsFormatFunc Otf
+generateFunc Woff
+generateFunc Woff2
+generateFunc Ttf
+generateFunc Otf
 
 const
   fontMatcher* = @[

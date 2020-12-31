@@ -15,8 +15,8 @@ const
   magicNumberWmv = @[0x30'u8, 0x26, 0xb2, 0x75, 0x8e, 0x66, 0xcf, 0x11, 0xa6, 0xd9]
   magicNumberFlv = @[0x46'u8, 0x4c, 0x56, 0x01]
 
-genIsFormatFunc Wmv
-genIsFormatFunc Flv
+generateFunc Wmv
+generateFunc Flv
 
 func isAvi*(buf: openArray[byte]): bool =
   return 10 < buf.len and

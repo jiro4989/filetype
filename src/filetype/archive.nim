@@ -46,22 +46,22 @@ const
   magicNumberRpm = @[0xed'u8, 0xab, 0xee, 0xdb]
   magicNumberElf = @[0x7f'u8, 0x45, 0x4c, 0x46]
 
-genIsFormatFunc Gz
-genIsFormatFunc Bz2
-genIsFormatFunc "7z"
-genIsFormatFunc Pdf
-genIsFormatFunc Exe
-genIsFormatFunc Rtf
-genIsFormatFunc Nes
-genIsFormatFunc Crx
-genIsFormatFunc Ps
-genIsFormatFunc Xz
-genIsFormatFunc Sqlite
-genIsFormatFunc Deb
-genIsFormatFunc Ar
-genIsFormatFunc Lz
-genIsFormatFunc Rpm
-genIsFormatFunc Elf
+generateFunc Gz
+generateFunc Bz2
+generateFunc "7z"
+generateFunc Pdf
+generateFunc Exe
+generateFunc Rtf
+generateFunc Nes
+generateFunc Crx
+generateFunc Ps
+generateFunc Xz
+generateFunc Sqlite
+generateFunc Deb
+generateFunc Ar
+generateFunc Lz
+generateFunc Rpm
+generateFunc Elf
 
 func isZip*(buf: openArray[byte]): bool =
   if 3 < buf.len:

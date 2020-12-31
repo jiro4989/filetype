@@ -33,10 +33,10 @@ func isWav*(buf: openArray[byte]): bool =
            buf[10] == 0x56'u8 and
            buf[11] == 0x45'u8
 
-genIsFormatFunc Midi
-genIsFormatFunc Ogg
-genIsFormatFunc Flac
-genIsFormatFunc Amr
+generateFunc Midi
+generateFunc Ogg
+generateFunc Flac
+generateFunc Amr
 
 const
   audioMatcher* = @[

@@ -9,7 +9,7 @@ func checkMagicNumber*(buf, magicNumber: openArray[byte]): bool =
 func str2Bytes*(s: string): seq[byte] =
   toSeq(s.items).mapIt(it.byte)
 
-macro genIsFormatFunc*(format: untyped): untyped =
+macro generateFunc*(format: untyped): untyped =
   let funcName = newIdentNode("is" & $format)
   let constName = newIdentNode("magicNumber" & $format)
   let arg = newIdentNode("buf")

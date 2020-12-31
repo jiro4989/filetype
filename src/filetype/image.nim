@@ -31,13 +31,13 @@ const
   magicNumberIco = @[0x00'u8, 0x00, 0x01, 0x00]
   magicNumberDwg = @[0x41'u8, 0x43, 0x31, 0x30]
 
-genIsFormatFunc Jpeg
-genIsFormatFunc Png
-genIsFormatFunc Bmp
-genIsFormatFunc Jxr
-genIsFormatFunc Psd
-genIsFormatFunc Ico
-genIsFormatFunc Dwg
+generateFunc Jpeg
+generateFunc Png
+generateFunc Bmp
+generateFunc Jxr
+generateFunc Psd
+generateFunc Ico
+generateFunc Dwg
 
 func isGif*(buf: openArray[byte]): bool =
   checkMagicNumber(buf, magicNumberGif87a) or checkMagicNumber(buf, magicNumberGif89a)
