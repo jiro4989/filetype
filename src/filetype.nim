@@ -3,6 +3,13 @@ export types
 
 proc match*(buf: openArray[byte]): FileType =
   ## Returns a file type from matched magic number.
+  ## Returns a empty `FileType` if `buf` was not matched any matchers.
+  runnableExamples:
+    var buf: seq[byte]
+    doAssert buf.match() == FileType()
+
+    from filetype/image import typeGif
+    doAssert @['G'.byte, 'I'.byte, 'F'.byte, '8'.byte, '7'.byte, 'a'.byte].match() == typeGif
   const allMatchers = @[imageMatcher, archiveMatcher, audioMatcher, fontMatcher, videoMatcher]
   for matchers in allMatchers:
     for matcher in matchers:
