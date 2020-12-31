@@ -36,6 +36,7 @@ Image     jpeg, png, bmp, jxr, psd, ico, dwg, gif
 Archive   gz, zip, bz2, 7z, pdf, exe, rtf, nes, crx, ps, xz, sqlite, deb, ar, lz, rpm, elf
 Audio     midi, ogg, flac, wav, amr, mp3, aac
 Font      woff, woff2, ttf, otf
+Video     wmv, flv, avi, mpeg, mp4
 =======   ======
 
 LICENSE
