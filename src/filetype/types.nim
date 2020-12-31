@@ -20,7 +20,3 @@ func newFileType*(mime, ext: string): FileType =
 
   result.mime = mime2
   result.extension = ext
-
-const
-  typeUnknown* = newFileType("unknown/unknown", "unknown")
-
