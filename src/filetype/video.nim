@@ -1,4 +1,4 @@
-import types, util
+import types, private/util
 
 const
   typeMp4* = newFileType("video/mp4", "mp4")

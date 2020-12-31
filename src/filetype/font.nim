@@ -1,4 +1,4 @@
-import types, util
+import types, private/util
 
 const
   typeWoff*  = newFileType("application/font-woff", "woff")

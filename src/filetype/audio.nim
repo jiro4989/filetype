@@ -1,4 +1,4 @@
-import types, util
+import types, private/util
 
 const
   typeMidi* = newFileType("audio/midi", "mid")

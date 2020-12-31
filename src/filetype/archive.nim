@@ -1,4 +1,4 @@
-import types, util
+import types, private/util
 
 const
   typeEpub* = newFileType("application/epub+zip", "epub")
