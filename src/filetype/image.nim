@@ -55,9 +55,7 @@ func isCr2AndTiffPrefix(buf: openArray[byte]): bool =
 func isCr2*(buf: openArray[byte]): bool =
   return 10 < buf.len and
     buf.isCr2AndTiffPrefix and
-    buf[8] == 0x43'u8 and
-    buf[9] == 0x52'u8 and
-    buf[10] == 0x02'u8
+    buf[8..10] == @[0x43'u8, 0x52, 0x02]
 
 func isTiff*(buf: openArray[byte]): bool =
   return 10 < buf.len and
