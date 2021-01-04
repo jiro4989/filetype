@@ -44,16 +44,24 @@ generateFunc Dwg
 func isGif*(buf: openArray[byte]): bool =
   checkMagicNumber(buf, magicNumberGif87a) or checkMagicNumber(buf, magicNumberGif89a)
 
+func isWebp*(buf: openArray[byte]): bool =
+  return 11 < buf.len and
+    buf[8] == 0x57'u8 and
+    buf[9] == 0x45'u8 and
+    buf[10] == 0x42'u8 and
+    buf[11] == 0x50'u8
+
 const
   imageMatcher* = @[
     (typeJpeg, isJpeg),
     (typeJpeg2000, isJpeg2000),
     (typePng, isPng),
+    (typeGif, isGif),
+    (typeWebp, isWebp),
     (typeBmp, isBmp),
     (typeJxr, isJxr),
     (typePsd, isPsd),
     (typeIco, isIco),
     (typeDwg, isDwg),
-    (typeGif, isGif),
   ]
 
