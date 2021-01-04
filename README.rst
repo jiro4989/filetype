@@ -32,7 +32,7 @@ Supported format
 =======   ======
 Type      Format
 =======   ======
-Image     jpeg, jp2, png, gif, webp, bmp, jxr, psd, ico, dwg
+Image     jpeg, jp2, png, gif, webp, cr2, bmp, jxr, psd, ico, dwg
 Archive   gz, zip, bz2, 7z, pdf, exe, rtf, nes, crx, ps, xz, sqlite, deb, ar, lz, rpm, elf
 Audio     midi, ogg, flac, wav, amr, mp3, aac
 Font      woff, woff2, ttf, otf
