@@ -22,6 +22,7 @@ const
   typeDwg* = newFileType("image/vnd.dwg", "dwg")
 
   magicNumberJpeg = @[0xff'u8, 0xd8, 0xff]
+  magicNumberJpeg2000 = @[0x0'u8, 0x0, 0x0, 0xc, 0x6a, 0x50, 0x20, 0x20, 0xd, 0xa, 0x87, 0xa, 0x0]
   magicNumberPng = @[0x89'u8, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]
   magicNumberGif87a = str2Bytes("GIF87a")
   magicNumberGif89a = str2Bytes("GIF89a")
@@ -32,6 +33,7 @@ const
   magicNumberDwg = @[0x41'u8, 0x43, 0x31, 0x30]
 
 generateFunc Jpeg
+generateFunc Jpeg2000
 generateFunc Png
 generateFunc Bmp
 generateFunc Jxr
@@ -42,15 +44,37 @@ generateFunc Dwg
 func isGif*(buf: openArray[byte]): bool =
   checkMagicNumber(buf, magicNumberGif87a) or checkMagicNumber(buf, magicNumberGif89a)
 
+func isWebp*(buf: openArray[byte]): bool =
+  return 11 < buf.len and
+    buf[8..11] == @[0x57'u8, 0x45, 0x42, 0x50]
+
+func isCr2AndTiffPrefix(buf: openArray[byte]): bool =
+  return (buf[0..3] == @[0x49'u8, 0x49, 0x2a, 0x0]) or
+    (buf[0..3] == @[0x4d'u8, 0x4d, 0x0, 0x2a])
+
+func isCr2*(buf: openArray[byte]): bool =
+  return 10 < buf.len and
+    buf.isCr2AndTiffPrefix and
+    buf[8..10] == @[0x43'u8, 0x52, 0x02]
+
+func isTiff*(buf: openArray[byte]): bool =
+  return 10 < buf.len and
+    buf.isCr2AndTiffPrefix and
+    not buf.isCr2
+
 const
   imageMatcher* = @[
     (typeJpeg, isJpeg),
+    (typeJpeg2000, isJpeg2000),
     (typePng, isPng),
+    (typeGif, isGif),
+    (typeWebp, isWebp),
+    (typeCr2, isCr2),
+    (typeTiff, isTiff),
     (typeBmp, isBmp),
     (typeJxr, isJxr),
     (typePsd, isPsd),
     (typeIco, isIco),
     (typeDwg, isDwg),
-    (typeGif, isGif),
   ]
 
