@@ -46,14 +46,11 @@ func isGif*(buf: openArray[byte]): bool =
 
 func isWebp*(buf: openArray[byte]): bool =
   return 11 < buf.len and
-    buf[8] == 0x57'u8 and
-    buf[9] == 0x45'u8 and
-    buf[10] == 0x42'u8 and
-    buf[11] == 0x50'u8
+    buf[8..11] == @[0x57'u8, 0x45, 0x42, 0x50]
 
 func isCr2AndTiffPrefix(buf: openArray[byte]): bool =
-  return (buf[0] == 0x49'u8 and buf[1] == 0x49'u8 and buf[2] == 0x2a'u8 and buf[3] == 0x0'u8) or
-    (buf[0] == 0x4d'u8 and buf[1] == 0x4d'u8 and buf[2] == 0x0'u8 and buf[3] == 0x2a'u8)
+  return (buf[0..3] == @[0x49'u8, 0x49, 0x2a, 0x0]) or
+    (buf[0..3] == @[0x4d'u8, 0x4d, 0x0, 0x2a])
 
 func isCr2*(buf: openArray[byte]): bool =
   return 10 < buf.len and
