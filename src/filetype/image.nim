@@ -51,13 +51,21 @@ func isWebp*(buf: openArray[byte]): bool =
     buf[10] == 0x42'u8 and
     buf[11] == 0x50'u8
 
+func isCr2AndTiffPrefix(buf: openArray[byte]): bool =
+  return (buf[0] == 0x49'u8 and buf[1] == 0x49'u8 and buf[2] == 0x2a'u8 and buf[3] == 0x0'u8) or
+    (buf[0] == 0x4d'u8 and buf[1] == 0x4d'u8 and buf[2] == 0x0'u8 and buf[3] == 0x2a'u8)
+
 func isCr2*(buf: openArray[byte]): bool =
   return 10 < buf.len and
-    ((buf[0] == 0x49'u8 and buf[1] == 0x49'u8 and buf[2] == 0x2a'u8 and buf[3] == 0x0'u8) or
-    (buf[0] == 0x4d'u8 and buf[1] == 0x4d'u8 and buf[2] == 0x0'u8 and buf[3] == 0x2a'u8) ) and
+    buf.isCr2AndTiffPrefix and
     buf[8] == 0x43'u8 and
     buf[9] == 0x52'u8 and
     buf[10] == 0x02'u8
+
+func isTiff*(buf: openArray[byte]): bool =
+  return 10 < buf.len and
+    buf.isCr2AndTiffPrefix and
+    not buf.isCr2
 
 const
   imageMatcher* = @[
@@ -67,6 +75,7 @@ const
     (typeGif, isGif),
     (typeWebp, isWebp),
     (typeCr2, isCr2),
+    (typeTiff, isTiff),
     (typeBmp, isBmp),
     (typeJxr, isJxr),
     (typePsd, isPsd),
