@@ -22,6 +22,7 @@ const
   typeDwg* = newFileType("image/vnd.dwg", "dwg")
 
   magicNumberJpeg = @[0xff'u8, 0xd8, 0xff]
+  magicNumberJpeg2000 = @[0x0'u8, 0x0, 0x0, 0xc, 0x6a, 0x50, 0x20, 0x20, 0xd, 0xa, 0x87, 0xa, 0x0]
   magicNumberPng = @[0x89'u8, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]
   magicNumberGif87a = str2Bytes("GIF87a")
   magicNumberGif89a = str2Bytes("GIF89a")
@@ -32,6 +33,7 @@ const
   magicNumberDwg = @[0x41'u8, 0x43, 0x31, 0x30]
 
 generateFunc Jpeg
+generateFunc Jpeg2000
 generateFunc Png
 generateFunc Bmp
 generateFunc Jxr
@@ -45,6 +47,7 @@ func isGif*(buf: openArray[byte]): bool =
 const
   imageMatcher* = @[
     (typeJpeg, isJpeg),
+    (typeJpeg2000, isJpeg2000),
     (typePng, isPng),
     (typeBmp, isBmp),
     (typeJxr, isJxr),
