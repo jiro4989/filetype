@@ -142,27 +142,37 @@ function main() {
   <li><a class="reference" href="#imageMatcher"
     title="imageMatcher = [((mime: (typ: &quot;image&quot;, subType: &quot;jpeg&quot;, value: &quot;image/jpeg&quot;),
                   extension: &quot;jpg&quot;), isJpeg), ((
-    mime: (typ: &quot;image&quot;, subType: &quot;png&quot;, value: &quot;image/png&quot;), extension: &quot;png&quot;),
-    isPng), ((mime: (typ: &quot;image&quot;, subType: &quot;bmp&quot;, value: &quot;image/bmp&quot;),
-              extension: &quot;bmp&quot;), isBmp), ((
-    mime: (typ: &quot;image&quot;, subType: &quot;vnd.ms-photo&quot;, value: &quot;image/vnd.ms-photo&quot;),
-    extension: &quot;jxr&quot;), isJxr), ((mime: (typ: &quot;image&quot;,
-                                        subType: &quot;vnd.adobe.photoshop&quot;,
-                                        value: &quot;image/vnd.adobe.photoshop&quot;),
-                                 extension: &quot;psd&quot;), isPsd), ((mime: (
+    mime: (typ: &quot;image&quot;, subType: &quot;jp2&quot;, value: &quot;image/jp2&quot;), extension: &quot;jp2&quot;),
+    isJpeg2000), ((mime: (typ: &quot;image&quot;, subType: &quot;png&quot;, value: &quot;image/png&quot;),
+                   extension: &quot;png&quot;), isPng), ((
+    mime: (typ: &quot;image&quot;, subType: &quot;gif&quot;, value: &quot;image/gif&quot;), extension: &quot;gif&quot;),
+    isGif), ((mime: (typ: &quot;image&quot;, subType: &quot;webp&quot;, value: &quot;image/webp&quot;),
+              extension: &quot;webp&quot;), isWebp), ((
+    mime: (typ: &quot;image&quot;, subType: &quot;x-canon-cr2&quot;, value: &quot;image/x-canon-cr2&quot;),
+    extension: &quot;cr2&quot;), isCr2), ((mime: (typ: &quot;image&quot;, subType: &quot;tiff&quot;,
+                                        value: &quot;image/tiff&quot;), extension: &quot;tif&quot;),
+                                isTiff), ((
+    mime: (typ: &quot;image&quot;, subType: &quot;bmp&quot;, value: &quot;image/bmp&quot;), extension: &quot;bmp&quot;),
+    isBmp), ((mime: (typ: &quot;image&quot;, subType: &quot;vnd.ms-photo&quot;,
+                     value: &quot;image/vnd.ms-photo&quot;), extension: &quot;jxr&quot;), isJxr), ((mime: (
+    typ: &quot;image&quot;, subType: &quot;vnd.adobe.photoshop&quot;,
+    value: &quot;image/vnd.adobe.photoshop&quot;), extension: &quot;psd&quot;), isPsd), ((mime: (
     typ: &quot;image&quot;, subType: &quot;vnd.microsoft.icon&quot;,
     value: &quot;image/vnd.microsoft.icon&quot;), extension: &quot;ico&quot;), isIco), ((
     mime: (typ: &quot;image&quot;, subType: &quot;vnd.dwg&quot;, value: &quot;image/vnd.dwg&quot;),
-    extension: &quot;dwg&quot;), isDwg), ((mime: (typ: &quot;image&quot;, subType: &quot;gif&quot;,
-                                        value: &quot;image/gif&quot;), extension: &quot;gif&quot;),
-                                isGif)]">imageMatcher</a></li>
+    extension: &quot;dwg&quot;), isDwg)]">imageMatcher</a></li>
 
   </ul>
 </li>
 <li>
   <a class="reference reference-toplevel" href="#13" id="63">Funcs</a>
   <ul class="simple simple-toc-section">
-      <ul class="simple nested-toc-section">isPsd
+      <ul class="simple nested-toc-section">isJpeg2000
+      <li><a class="reference" href="#isJpeg2000"
+    title="isJpeg2000(buf: openArray[byte]): bool">isJpeg2000</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isPsd
       <li><a class="reference" href="#isPsd"
     title="isPsd(buf: openArray[byte]): bool">isPsd</a></li>
 
@@ -170,6 +180,11 @@ function main() {
   <ul class="simple nested-toc-section">isPng
       <li><a class="reference" href="#isPng"
     title="isPng(buf: openArray[byte]): bool">isPng</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isTiff
+      <li><a class="reference" href="#isTiff%2CopenArray%5Bbyte%5D"
+    title="isTiff(buf: openArray[byte]): bool">isTiff,<wbr>openArray[byte]</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">isIco
@@ -187,6 +202,11 @@ function main() {
     title="isJpeg(buf: openArray[byte]): bool">isJpeg</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">isCr2
+      <li><a class="reference" href="#isCr2%2CopenArray%5Bbyte%5D"
+    title="isCr2(buf: openArray[byte]): bool">isCr2,<wbr>openArray[byte]</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">isBmp
       <li><a class="reference" href="#isBmp"
     title="isBmp(buf: openArray[byte]): bool">isBmp</a></li>
@@ -195,6 +215,11 @@ function main() {
   <ul class="simple nested-toc-section">isDwg
       <li><a class="reference" href="#isDwg"
     title="isDwg(buf: openArray[byte]): bool">isDwg</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isWebp
+      <li><a class="reference" href="#isWebp%2CopenArray%5Bbyte%5D"
+    title="isWebp(buf: openArray[byte]): bool">isWebp,<wbr>openArray[byte]</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">isGif
@@ -334,20 +359,25 @@ function main() {
 <a id="imageMatcher"></a>
 <dt><pre><a href="image.html#imageMatcher"><span class="Identifier">imageMatcher</span></a> <span class="Other">=</span> <span class="Other">[</span><span class="Other">(</span><span class="Other">(</span><span class="Identifier">mime</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">typ</span><span class="Other">:</span> <span class="StringLit">&quot;image&quot;</span><span class="Other">,</span> <span class="Identifier">subType</span><span class="Other">:</span> <span class="StringLit">&quot;jpeg&quot;</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="StringLit">&quot;image/jpeg&quot;</span><span class="Other">)</span><span class="Other">,</span>
                   <span class="Identifier">extension</span><span class="Other">:</span> <span class="StringLit">&quot;jpg&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">isJpeg</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Other">(</span>
-    <span class="Identifier">mime</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">typ</span><span class="Other">:</span> <span class="StringLit">&quot;image&quot;</span><span class="Other">,</span> <span class="Identifier">subType</span><span class="Other">:</span> <span class="StringLit">&quot;png&quot;</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="StringLit">&quot;image/png&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">extension</span><span class="Other">:</span> <span class="StringLit">&quot;png&quot;</span><span class="Other">)</span><span class="Other">,</span>
-    <span class="Identifier">isPng</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Other">(</span><span class="Identifier">mime</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">typ</span><span class="Other">:</span> <span class="StringLit">&quot;image&quot;</span><span class="Other">,</span> <span class="Identifier">subType</span><span class="Other">:</span> <span class="StringLit">&quot;bmp&quot;</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="StringLit">&quot;image/bmp&quot;</span><span class="Other">)</span><span class="Other">,</span>
-              <span class="Identifier">extension</span><span class="Other">:</span> <span class="StringLit">&quot;bmp&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">isBmp</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Other">(</span>
-    <span class="Identifier">mime</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">typ</span><span class="Other">:</span> <span class="StringLit">&quot;image&quot;</span><span class="Other">,</span> <span class="Identifier">subType</span><span class="Other">:</span> <span class="StringLit">&quot;vnd.ms-photo&quot;</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="StringLit">&quot;image/vnd.ms-photo&quot;</span><span class="Other">)</span><span class="Other">,</span>
-    <span class="Identifier">extension</span><span class="Other">:</span> <span class="StringLit">&quot;jxr&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">isJxr</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Other">(</span><span class="Identifier">mime</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">typ</span><span class="Other">:</span> <span class="StringLit">&quot;image&quot;</span><span class="Other">,</span>
-                                        <span class="Identifier">subType</span><span class="Other">:</span> <span class="StringLit">&quot;vnd.adobe.photoshop&quot;</span><span class="Other">,</span>
-                                        <span class="Identifier">value</span><span class="Other">:</span> <span class="StringLit">&quot;image/vnd.adobe.photoshop&quot;</span><span class="Other">)</span><span class="Other">,</span>
-                                 <span class="Identifier">extension</span><span class="Other">:</span> <span class="StringLit">&quot;psd&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">isPsd</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Other">(</span><span class="Identifier">mime</span><span class="Other">:</span> <span class="Other">(</span>
+    <span class="Identifier">mime</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">typ</span><span class="Other">:</span> <span class="StringLit">&quot;image&quot;</span><span class="Other">,</span> <span class="Identifier">subType</span><span class="Other">:</span> <span class="StringLit">&quot;jp2&quot;</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="StringLit">&quot;image/jp2&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">extension</span><span class="Other">:</span> <span class="StringLit">&quot;jp2&quot;</span><span class="Other">)</span><span class="Other">,</span>
+    <span class="Identifier">isJpeg2000</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Other">(</span><span class="Identifier">mime</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">typ</span><span class="Other">:</span> <span class="StringLit">&quot;image&quot;</span><span class="Other">,</span> <span class="Identifier">subType</span><span class="Other">:</span> <span class="StringLit">&quot;png&quot;</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="StringLit">&quot;image/png&quot;</span><span class="Other">)</span><span class="Other">,</span>
+                   <span class="Identifier">extension</span><span class="Other">:</span> <span class="StringLit">&quot;png&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">isPng</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Other">(</span>
+    <span class="Identifier">mime</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">typ</span><span class="Other">:</span> <span class="StringLit">&quot;image&quot;</span><span class="Other">,</span> <span class="Identifier">subType</span><span class="Other">:</span> <span class="StringLit">&quot;gif&quot;</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="StringLit">&quot;image/gif&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">extension</span><span class="Other">:</span> <span class="StringLit">&quot;gif&quot;</span><span class="Other">)</span><span class="Other">,</span>
+    <span class="Identifier">isGif</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Other">(</span><span class="Identifier">mime</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">typ</span><span class="Other">:</span> <span class="StringLit">&quot;image&quot;</span><span class="Other">,</span> <span class="Identifier">subType</span><span class="Other">:</span> <span class="StringLit">&quot;webp&quot;</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="StringLit">&quot;image/webp&quot;</span><span class="Other">)</span><span class="Other">,</span>
+              <span class="Identifier">extension</span><span class="Other">:</span> <span class="StringLit">&quot;webp&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">isWebp</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Other">(</span>
+    <span class="Identifier">mime</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">typ</span><span class="Other">:</span> <span class="StringLit">&quot;image&quot;</span><span class="Other">,</span> <span class="Identifier">subType</span><span class="Other">:</span> <span class="StringLit">&quot;x-canon-cr2&quot;</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="StringLit">&quot;image/x-canon-cr2&quot;</span><span class="Other">)</span><span class="Other">,</span>
+    <span class="Identifier">extension</span><span class="Other">:</span> <span class="StringLit">&quot;cr2&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">isCr2</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Other">(</span><span class="Identifier">mime</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">typ</span><span class="Other">:</span> <span class="StringLit">&quot;image&quot;</span><span class="Other">,</span> <span class="Identifier">subType</span><span class="Other">:</span> <span class="StringLit">&quot;tiff&quot;</span><span class="Other">,</span>
+                                        <span class="Identifier">value</span><span class="Other">:</span> <span class="StringLit">&quot;image/tiff&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">extension</span><span class="Other">:</span> <span class="StringLit">&quot;tif&quot;</span><span class="Other">)</span><span class="Other">,</span>
+                                <span class="Identifier">isTiff</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Other">(</span>
+    <span class="Identifier">mime</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">typ</span><span class="Other">:</span> <span class="StringLit">&quot;image&quot;</span><span class="Other">,</span> <span class="Identifier">subType</span><span class="Other">:</span> <span class="StringLit">&quot;bmp&quot;</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="StringLit">&quot;image/bmp&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">extension</span><span class="Other">:</span> <span class="StringLit">&quot;bmp&quot;</span><span class="Other">)</span><span class="Other">,</span>
+    <span class="Identifier">isBmp</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Other">(</span><span class="Identifier">mime</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">typ</span><span class="Other">:</span> <span class="StringLit">&quot;image&quot;</span><span class="Other">,</span> <span class="Identifier">subType</span><span class="Other">:</span> <span class="StringLit">&quot;vnd.ms-photo&quot;</span><span class="Other">,</span>
+                     <span class="Identifier">value</span><span class="Other">:</span> <span class="StringLit">&quot;image/vnd.ms-photo&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">extension</span><span class="Other">:</span> <span class="StringLit">&quot;jxr&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">isJxr</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Other">(</span><span class="Identifier">mime</span><span class="Other">:</span> <span class="Other">(</span>
+    <span class="Identifier">typ</span><span class="Other">:</span> <span class="StringLit">&quot;image&quot;</span><span class="Other">,</span> <span class="Identifier">subType</span><span class="Other">:</span> <span class="StringLit">&quot;vnd.adobe.photoshop&quot;</span><span class="Other">,</span>
+    <span class="Identifier">value</span><span class="Other">:</span> <span class="StringLit">&quot;image/vnd.adobe.photoshop&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">extension</span><span class="Other">:</span> <span class="StringLit">&quot;psd&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">isPsd</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Other">(</span><span class="Identifier">mime</span><span class="Other">:</span> <span class="Other">(</span>
     <span class="Identifier">typ</span><span class="Other">:</span> <span class="StringLit">&quot;image&quot;</span><span class="Other">,</span> <span class="Identifier">subType</span><span class="Other">:</span> <span class="StringLit">&quot;vnd.microsoft.icon&quot;</span><span class="Other">,</span>
     <span class="Identifier">value</span><span class="Other">:</span> <span class="StringLit">&quot;image/vnd.microsoft.icon&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">extension</span><span class="Other">:</span> <span class="StringLit">&quot;ico&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">isIco</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Other">(</span>
     <span class="Identifier">mime</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">typ</span><span class="Other">:</span> <span class="StringLit">&quot;image&quot;</span><span class="Other">,</span> <span class="Identifier">subType</span><span class="Other">:</span> <span class="StringLit">&quot;vnd.dwg&quot;</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="StringLit">&quot;image/vnd.dwg&quot;</span><span class="Other">)</span><span class="Other">,</span>
-    <span class="Identifier">extension</span><span class="Other">:</span> <span class="StringLit">&quot;dwg&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">isDwg</span><span class="Other">)</span><span class="Other">,</span> <span class="Other">(</span><span class="Other">(</span><span class="Identifier">mime</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">typ</span><span class="Other">:</span> <span class="StringLit">&quot;image&quot;</span><span class="Other">,</span> <span class="Identifier">subType</span><span class="Other">:</span> <span class="StringLit">&quot;gif&quot;</span><span class="Other">,</span>
-                                        <span class="Identifier">value</span><span class="Other">:</span> <span class="StringLit">&quot;image/gif&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">extension</span><span class="Other">:</span> <span class="StringLit">&quot;gif&quot;</span><span class="Other">)</span><span class="Other">,</span>
-                                <span class="Identifier">isGif</span><span class="Other">)</span><span class="Other">]</span></pre></dt>
+    <span class="Identifier">extension</span><span class="Other">:</span> <span class="StringLit">&quot;dwg&quot;</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">isDwg</span><span class="Other">)</span><span class="Other">]</span></pre></dt>
 <dd>
 
 
@@ -363,6 +393,13 @@ function main() {
 <dd>
 
 Returns <tt class="docutils literal"><span class="pre">buf</span></tt> matches Jpeg format magic number.
+
+</dd>
+<a id="isJpeg2000"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#isJpeg2000"><span class="Identifier">isJpeg2000</span></a><span class="Other">(</span><span class="Identifier">buf</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">byte</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Returns <tt class="docutils literal"><span class="pre">buf</span></tt> matches Jpeg2000 format magic number.
 
 </dd>
 <a id="isPng"></a>
@@ -414,6 +451,27 @@ Returns <tt class="docutils literal"><span class="pre">buf</span></tt> matches D
 
 
 </dd>
+<a id="isWebp,openArray[byte]"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#isWebp%2CopenArray%5Bbyte%5D"><span class="Identifier">isWebp</span></a><span class="Other">(</span><span class="Identifier">buf</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">byte</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="isCr2,openArray[byte]"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#isCr2%2CopenArray%5Bbyte%5D"><span class="Identifier">isCr2</span></a><span class="Other">(</span><span class="Identifier">buf</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">byte</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="isTiff,openArray[byte]"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#isTiff%2CopenArray%5Bbyte%5D"><span class="Identifier">isTiff</span></a><span class="Other">(</span><span class="Identifier">buf</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">byte</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
 
 </dl></div>
 
@@ -424,7 +482,7 @@ Returns <tt class="docutils literal"><span class="pre">buf</span></tt> matches D
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-31 14:44:11 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-01-04 13:19:32 UTC</small>
       </div>
     </div>
   </div>

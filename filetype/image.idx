@@ -12,6 +12,7 @@ typeIco	filetype/image.html#typeIco	image: typeIco
 typeHeif	filetype/image.html#typeHeif	image: typeHeif	
 typeDwg	filetype/image.html#typeDwg	image: typeDwg	
 isJpeg	filetype/image.html#isJpeg	image: isJpeg(buf: openArray[byte]): bool	
+isJpeg2000	filetype/image.html#isJpeg2000	image: isJpeg2000(buf: openArray[byte]): bool	
 isPng	filetype/image.html#isPng	image: isPng(buf: openArray[byte]): bool	
 isBmp	filetype/image.html#isBmp	image: isBmp(buf: openArray[byte]): bool	
 isJxr	filetype/image.html#isJxr	image: isJxr(buf: openArray[byte]): bool	
@@ -19,4 +20,7 @@ isPsd	filetype/image.html#isPsd	image: isPsd(buf: openArray[byte]): bool
 isIco	filetype/image.html#isIco	image: isIco(buf: openArray[byte]): bool	
 isDwg	filetype/image.html#isDwg	image: isDwg(buf: openArray[byte]): bool	
 isGif	filetype/image.html#isGif,openArray[byte]	image: isGif(buf: openArray[byte]): bool	
+isWebp	filetype/image.html#isWebp,openArray[byte]	image: isWebp(buf: openArray[byte]): bool	
+isCr2	filetype/image.html#isCr2,openArray[byte]	image: isCr2(buf: openArray[byte]): bool	
+isTiff	filetype/image.html#isTiff,openArray[byte]	image: isTiff(buf: openArray[byte]): bool	
 imageMatcher	filetype/image.html#imageMatcher	image: imageMatcher	
