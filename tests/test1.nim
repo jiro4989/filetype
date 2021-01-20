@@ -8,29 +8,29 @@ const
 func sampleFile(ext: string): string =
   return testDataDir/"sample." & ext
 
-proc checkFile(ext, mime: string) =
-  check matchFile(sampleFile(ext)).mime.value == mime
-
 suite "proc matchFile":
   # image
-  test "image: jpg": checkFile("jpg", "image/jpeg")
-  test "image: jpeg": checkFile("jpeg", "image/jpeg")
-  test "image: png": checkFile("png", "image/png")
-  test "image: gif": checkFile("gif", "image/gif")
-  test "image: webp": checkFile("webp", "image/webp")
-  test "image: tiff": checkFile("tiff", "image/tiff")
-  test "image: bmp": checkFile("bmp", "image/bmp")
-  test "image: psd": checkFile("psd", "image/vnd.adobe.photoshop")
-  test "image: ico": checkFile("ico", "image/vnd.microsoft.icon")
+  test "image: jpg": check matchFile(sampleFile("jpg")).mime.value == "image/jpeg"
+  test "image: jpeg": check matchFile(sampleFile("jpeg")).mime.value == "image/jpeg"
+  test "image: png": check matchFile(sampleFile("png")).mime.value == "image/png"
+  test "image: gif": check matchFile(sampleFile("gif")).mime.value == "image/gif"
+  test "image: webp": check matchFile(sampleFile("webp")).mime.value == "image/webp"
+  test "image: tiff": check matchFile(sampleFile("tiff")).mime.value == "image/tiff"
+  test "image: bmp": check matchFile(sampleFile("bmp")).mime.value == "image/bmp"
+  test "image: psd": check matchFile(sampleFile("psd")).mime.value == "image/vnd.adobe.photoshop"
+  test "image: ico": check matchFile(sampleFile("ico")).mime.value == "image/vnd.microsoft.icon"
   # archive
-  test "archive: gzip": checkFile("gz", "application/gzip")
-  test "archive: zip": checkFile("zip", "application/zip")
-  test "archive: bzip2": checkFile("bz2", "application/x-bzip2")
-  test "archive: 7z": checkFile("7z", "application/x-7z-compressed")
-  test "archive: pdf": checkFile("pdf", "application/pdf")
-  test "archive: exe": checkFile("exe", "application/vnd.microsoft.portable-executable")
-  test "archive: ps": checkFile("ps", "application/postscript")
-  test "archive: xz": checkFile("xz", "application/x-xz")
+  test "archive: gzip": check matchFile(sampleFile("gz")).mime.value == "application/gzip"
+  test "archive: zip": check matchFile(sampleFile("zip")).mime.value == "application/zip"
+  test "archive: bzip2": check matchFile(sampleFile("bz2")).mime.value == "application/x-bzip2"
+  test "archive: 7z": check matchFile(sampleFile("7z")).mime.value == "application/x-7z-compressed"
+  test "archive: pdf": check matchFile(sampleFile("pdf")).mime.value == "application/pdf"
+  test "archive: exe": check matchFile(sampleFile("exe")).mime.value == "application/vnd.microsoft.portable-executable"
+  test "archive: ps": check matchFile(sampleFile("ps")).mime.value == "application/postscript"
+  test "archive: xz": check matchFile(sampleFile("xz")).mime.value == "application/x-xz"
+  test "archive: deb": check matchFile(sampleFile("deb")).mime.value == "application/vnd.debian.binary-package"
+  test "archive: rpm": check matchFile(sampleFile("rpm")).mime.value == "application/x-rpm"
+  test "archive: elf": check matchFile(sampleFile("elf")).mime.value == "application/x-executable"
   # audio
-  test "audio/midi": checkFile("mid", "audio/midi")
-  test "audio/wav": checkFile("wav", "audio/x-wav")
+  test "audio/midi": check matchFile(sampleFile("mid")).mime.value == "audio/midi"
+  test "audio/wav": check matchFile(sampleFile("wav")).mime.value == "audio/x-wav"
