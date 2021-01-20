@@ -30,6 +30,7 @@ suite "proc matchFile":
   test "archive: pdf": checkFile("pdf", "application/pdf")
   test "archive: exe": checkFile("exe", "application/vnd.microsoft.portable-executable")
   test "archive: ps": checkFile("ps", "application/postscript")
+  test "archive: xz": checkFile("xz", "application/x-xz")
   # audio
   test "audio/midi": checkFile("mid", "audio/midi")
   test "audio/wav": checkFile("wav", "audio/x-wav")
