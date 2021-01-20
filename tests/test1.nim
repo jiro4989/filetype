@@ -23,6 +23,7 @@ suite "proc matchFile":
   test "archive: gzip": check matchFile(sampleFile("gz")).mime.value == "application/gzip"
   test "archive: zip": check matchFile(sampleFile("zip")).mime.value == "application/zip"
   test "archive: bzip2": check matchFile(sampleFile("bz2")).mime.value == "application/x-bzip2"
+  test "archive: 7z": check matchFile(sampleFile("7z")).mime.value == "application/x-7z-compressed"
   # audio
   test "audio/midi": check matchFile(sampleFile("mid")).mime.value == "audio/midi"
   test "audio/wav": check matchFile(sampleFile("wav")).mime.value == "audio/x-wav"
