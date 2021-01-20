@@ -16,6 +16,7 @@ suite "proc matchFile":
   test "gif": check matchFile(sampleFile("gif")).mime.value == "image/gif"
   test "webp": check matchFile(sampleFile("webp")).mime.value == "image/webp"
   test "tiff": check matchFile(sampleFile("tiff")).mime.value == "image/tiff"
+  test "bmp": check matchFile(sampleFile("bmp")).mime.value == "image/bmp"
   # archive
   test "gzip": check matchFile(sampleFile("gz")).mime.value == "application/gzip"
   test "zip": check matchFile(sampleFile("zip")).mime.value == "application/zip"
