@@ -37,7 +37,7 @@ when not defined js:
 
     var strm = openFileStream(file)
     defer: strm.close()
-    var buf = newSeqWith(size.int, 0'u8)
+    var buf = newSeqWith(size, 0'u8)
     for i in 0..<size:
       buf[i] = strm.readUint8()
     return buf.match()
