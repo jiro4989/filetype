@@ -34,3 +34,5 @@ suite "proc matchFile":
   # audio
   test "audio/midi": check matchFile(sampleFile("mid")).mime.value == "audio/midi"
   test "audio/wav": check matchFile(sampleFile("wav")).mime.value == "audio/x-wav"
+  # others
+  test "returns empty when a file doesn't exist": check matchFile("hello.world").mime.value == ""
