@@ -1,0 +1,16 @@
+%!
+% macro (draw rectangle) ; usage: left top width height RRECT
+/RRECT { newpath 4 copy pop pop moveto dup 0 exch rlineto exch 0 rlineto neg 0 exch rlineto closepath pop pop } def
+
+100 100 100 150 RRECT
+.5 setgray
+fill
+
+100 300 moveto
+/Helvetica findfont
+12 scalefont
+setfont
+.5 0 .5 0 setcmykcolor
+(test string) show
+
+showpage

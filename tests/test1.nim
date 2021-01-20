@@ -26,6 +26,7 @@ suite "proc matchFile":
   test "archive: 7z": check matchFile(sampleFile("7z")).mime.value == "application/x-7z-compressed"
   test "archive: pdf": check matchFile(sampleFile("pdf")).mime.value == "application/pdf"
   test "archive: exe": check matchFile(sampleFile("exe")).mime.value == "application/vnd.microsoft.portable-executable"
+  test "archive: ps": check matchFile(sampleFile("ps")).mime.value == "application/postscript"
   # audio
   test "audio/midi": check matchFile(sampleFile("mid")).mime.value == "audio/midi"
   test "audio/wav": check matchFile(sampleFile("wav")).mime.value == "audio/x-wav"
