@@ -18,6 +18,7 @@ suite "proc matchFile":
   test "tiff": check matchFile(sampleFile("tiff")).mime.value == "image/tiff"
   test "bmp": check matchFile(sampleFile("bmp")).mime.value == "image/bmp"
   test "psd": check matchFile(sampleFile("psd")).mime.value == "image/vnd.adobe.photoshop"
+  test "ico": check matchFile(sampleFile("ico")).mime.value == "image/vnd.microsoft.icon"
   # archive
   test "gzip": check matchFile(sampleFile("gz")).mime.value == "application/gzip"
   test "zip": check matchFile(sampleFile("zip")).mime.value == "application/zip"
