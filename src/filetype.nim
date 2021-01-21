@@ -19,14 +19,25 @@ proc match*(buf: openArray[byte]): FileType =
 
 when not defined js:
   import streams
+  from os import getFileSize, fileExists
+  from sequtils import newSeqWith
 
   proc matchFile*(file: string): FileType =
     ## Returns a file type from matched magic number.
     ## `file` is a file path.
     ##
     ## **Note:** Not available for JS backend.
+    if not fileExists(file): return
+
+    const maxSize = 1024
+    let fileSize = file.getFileSize()
+    let size =
+      if fileSize < maxSize: fileSize.int
+      else: maxSize
+
     var strm = openFileStream(file)
     defer: strm.close()
-    var buf: array[20, byte]
-    strm.read(buf)
+    var buf = newSeqWith(size, 0'u8)
+    for i in 0..<size:
+      buf[i] = strm.readUint8()
     return buf.match()
