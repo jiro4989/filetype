@@ -32,8 +32,9 @@ suite "proc matchFile":
   test "archive: rpm": check matchFile(sampleFile("rpm")).mime.value == "application/x-rpm"
   test "archive: elf": check matchFile(sampleFile("elf")).mime.value == "application/x-executable"
   # audio
-  test "audio/midi": check matchFile(sampleFile("mid")).mime.value == "audio/midi"
-  test "audio/wav": check matchFile(sampleFile("wav")).mime.value == "audio/x-wav"
-  test "audio/ogg": check matchFile(sampleFile("ogg")).mime.value == "audio/ogg"
+  test "audio: midi": check matchFile(sampleFile("mid")).mime.value == "audio/midi"
+  test "audio: wav": check matchFile(sampleFile("wav")).mime.value == "audio/x-wav"
+  test "audio: ogg": check matchFile(sampleFile("ogg")).mime.value == "audio/ogg"
+  test "audio: flac": check matchFile(sampleFile("flac")).mime.value == "audio/x-flac"
   # others
   test "returns empty when a file doesn't exist": check matchFile("hello.world").mime.value == ""
