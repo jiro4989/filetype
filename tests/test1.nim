@@ -38,5 +38,13 @@ suite "proc matchFile":
   test "audio: wav": check matchFile(sampleFile("wav")).mime.value == "audio/x-wav"
   test "audio: mp3": check matchFile(sampleFile("mp3")).mime.value == "audio/mpeg"
   test "audio: aac": check matchFile(sampleFile("aac")).mime.value == "audio/aac"
+
+  # font
+  test "audio: ttf":
+    let path = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+    if fileExists(path):
+      echo path & " exists"
+      check matchFile(path).mime.value == "application/font-sfnt"
+
   # others
   test "returns empty when a file doesn't exist": check matchFile("hello.world").mime.value == ""
