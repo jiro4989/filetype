@@ -46,5 +46,8 @@ suite "proc matchFile":
       echo path & " exists"
       check matchFile(path).mime.value == "application/font-sfnt"
 
+  # video
+  test "video: mp4": check matchFile(sampleFile("mp4")).mime.value == "video/mp4"
+
   # others
   test "returns empty when a file doesn't exist": check matchFile("hello.world").mime.value == ""
