@@ -49,6 +49,7 @@ suite "proc matchFile":
   # video
   test "video: wmv": check matchFile(sampleFile("wmv")).mime.value == "video/x-ms-wmv"
   test "video: mp4": check matchFile(sampleFile("mp4")).mime.value == "video/mp4"
+  test "video: avi": check matchFile(sampleFile("avi")).mime.value == "video/x-msvideo"
 
   # others
   test "returns empty when a file doesn't exist": check matchFile("hello.world").mime.value == ""
