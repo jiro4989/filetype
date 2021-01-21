@@ -50,6 +50,7 @@ suite "proc matchFile":
   test "video: wmv": check matchFile(sampleFile("wmv")).mime.value == "video/x-ms-wmv"
   test "video: flv": check matchFile(sampleFile("flv")).mime.value == "video/x-flv"
   test "video: avi": check matchFile(sampleFile("avi")).mime.value == "video/x-msvideo"
+  test "video: mpeg": check matchFile(sampleFile("mpeg")).mime.value == "video/mpeg"
   test "video: mp4": check matchFile(sampleFile("mp4")).mime.value == "video/mp4"
 
   # others
