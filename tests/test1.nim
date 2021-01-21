@@ -47,6 +47,7 @@ suite "proc matchFile":
       check matchFile(path).mime.value == "application/font-sfnt"
 
   # video
+  test "video: wmv": check matchFile(sampleFile("wmv")).mime.value == "video/x-ms-wmv"
   test "video: mp4": check matchFile(sampleFile("mp4")).mime.value == "video/mp4"
 
   # others
