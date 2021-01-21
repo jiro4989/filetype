@@ -24,7 +24,7 @@ Installation
 
 .. code-block:: shell
 
-   $ nimble install -Y https://github.com/jiro4989/filetype
+   $ nimble install -Y filetype
 
 Supported format
 ================
