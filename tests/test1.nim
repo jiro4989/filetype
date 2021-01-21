@@ -37,5 +37,6 @@ suite "proc matchFile":
   test "audio: flac": check matchFile(sampleFile("flac")).mime.value == "audio/x-flac"
   test "audio: wav": check matchFile(sampleFile("wav")).mime.value == "audio/x-wav"
   test "audio: mp3": check matchFile(sampleFile("mp3")).mime.value == "audio/mpeg"
+  test "audio: aac": check matchFile(sampleFile("aac")).mime.value == "audio/aac"
   # others
   test "returns empty when a file doesn't exist": check matchFile("hello.world").mime.value == ""
