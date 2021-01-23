@@ -39,13 +39,26 @@ macro generateFunc*(format: untyped): untyped =
 
     readFileFuncName = newIdentNode("is" & $format & "File")
     fileArg = newIdentNode("file")
-    fileComment = newCommentStmtNode(&"Returns that the `file` is {format} format file or not.")
+    fileComment = newCommentStmtNode(&"Returns that the `file` is {format} format file or not.\n\n**Note:** Not available for JS backend.")
 
   quote do:
     func `funcName`*(`arg`: openArray[byte]): bool =
       `comment`
       checkMagicNumber(`arg`, `constName`)
 
+    when not defined js:
+      proc `readFileFuncName`*(`fileArg`: string): bool =
+        `fileComment`
+        readMagicNubmer(`fileArg`).`funcName`()
+
+macro generateFileFunc*(format: untyped): untyped =
+  let
+    funcName = newIdentNode("is" & $format)
+    readFileFuncName = newIdentNode("is" & $format & "File")
+    fileArg = newIdentNode("file")
+    fileComment = newCommentStmtNode(&"Returns that the `file` is {format} format file or not.\n\n**Note:** Not available for JS backend.")
+
+  quote do:
     when not defined js:
       proc `readFileFuncName`*(`fileArg`: string): bool =
         `fileComment`
