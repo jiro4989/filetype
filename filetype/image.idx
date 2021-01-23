@@ -12,15 +12,27 @@ typeIco	filetype/image.html#typeIco	image: typeIco
 typeHeif	filetype/image.html#typeHeif	image: typeHeif	
 typeDwg	filetype/image.html#typeDwg	image: typeDwg	
 isJpeg	filetype/image.html#isJpeg	image: isJpeg(buf: openArray[byte]): bool	
+isJpegFile	filetype/image.html#isJpegFile,string	image: isJpegFile(file: string): bool	
 isJpeg2000	filetype/image.html#isJpeg2000	image: isJpeg2000(buf: openArray[byte]): bool	
+isJpeg2000File	filetype/image.html#isJpeg2000File,string	image: isJpeg2000File(file: string): bool	
 isPng	filetype/image.html#isPng	image: isPng(buf: openArray[byte]): bool	
+isPngFile	filetype/image.html#isPngFile,string	image: isPngFile(file: string): bool	
 isBmp	filetype/image.html#isBmp	image: isBmp(buf: openArray[byte]): bool	
+isBmpFile	filetype/image.html#isBmpFile,string	image: isBmpFile(file: string): bool	
 isJxr	filetype/image.html#isJxr	image: isJxr(buf: openArray[byte]): bool	
+isJxrFile	filetype/image.html#isJxrFile,string	image: isJxrFile(file: string): bool	
 isPsd	filetype/image.html#isPsd	image: isPsd(buf: openArray[byte]): bool	
+isPsdFile	filetype/image.html#isPsdFile,string	image: isPsdFile(file: string): bool	
 isIco	filetype/image.html#isIco	image: isIco(buf: openArray[byte]): bool	
+isIcoFile	filetype/image.html#isIcoFile,string	image: isIcoFile(file: string): bool	
 isDwg	filetype/image.html#isDwg	image: isDwg(buf: openArray[byte]): bool	
+isDwgFile	filetype/image.html#isDwgFile,string	image: isDwgFile(file: string): bool	
 isGif	filetype/image.html#isGif,openArray[byte]	image: isGif(buf: openArray[byte]): bool	
+isGifFile	filetype/image.html#isGifFile,string	image: isGifFile(file: string): bool	
 isWebp	filetype/image.html#isWebp,openArray[byte]	image: isWebp(buf: openArray[byte]): bool	
+isWebpFile	filetype/image.html#isWebpFile,string	image: isWebpFile(file: string): bool	
 isCr2	filetype/image.html#isCr2,openArray[byte]	image: isCr2(buf: openArray[byte]): bool	
+isCr2File	filetype/image.html#isCr2File,string	image: isCr2File(file: string): bool	
 isTiff	filetype/image.html#isTiff,openArray[byte]	image: isTiff(buf: openArray[byte]): bool	
+isTiffFile	filetype/image.html#isTiffFile,string	image: isTiffFile(file: string): bool	
 imageMatcher	filetype/image.html#imageMatcher	image: imageMatcher	

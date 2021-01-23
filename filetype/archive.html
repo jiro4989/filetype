@@ -224,6 +224,97 @@ function main() {
   </ul>
 </li>
 <li>
+  <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
+  <ul class="simple simple-toc-section">
+      <ul class="simple nested-toc-section">isRtfFile
+      <li><a class="reference" href="#isRtfFile%2Cstring"
+    title="isRtfFile(file: string): bool">isRtfFile,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isLzFile
+      <li><a class="reference" href="#isLzFile%2Cstring"
+    title="isLzFile(file: string): bool">isLzFile,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isGzFile
+      <li><a class="reference" href="#isGzFile%2Cstring"
+    title="isGzFile(file: string): bool">isGzFile,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isXzFile
+      <li><a class="reference" href="#isXzFile%2Cstring"
+    title="isXzFile(file: string): bool">isXzFile,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">is7zFile
+      <li><a class="reference" href="#is7zFile%2Cstring"
+    title="is7zFile(file: string): bool">is7zFile,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isRpmFile
+      <li><a class="reference" href="#isRpmFile%2Cstring"
+    title="isRpmFile(file: string): bool">isRpmFile,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isPsFile
+      <li><a class="reference" href="#isPsFile%2Cstring"
+    title="isPsFile(file: string): bool">isPsFile,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isCrxFile
+      <li><a class="reference" href="#isCrxFile%2Cstring"
+    title="isCrxFile(file: string): bool">isCrxFile,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isDebFile
+      <li><a class="reference" href="#isDebFile%2Cstring"
+    title="isDebFile(file: string): bool">isDebFile,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isExeFile
+      <li><a class="reference" href="#isExeFile%2Cstring"
+    title="isExeFile(file: string): bool">isExeFile,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isSqliteFile
+      <li><a class="reference" href="#isSqliteFile%2Cstring"
+    title="isSqliteFile(file: string): bool">isSqliteFile,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isPdfFile
+      <li><a class="reference" href="#isPdfFile%2Cstring"
+    title="isPdfFile(file: string): bool">isPdfFile,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isBz2File
+      <li><a class="reference" href="#isBz2File%2Cstring"
+    title="isBz2File(file: string): bool">isBz2File,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isNesFile
+      <li><a class="reference" href="#isNesFile%2Cstring"
+    title="isNesFile(file: string): bool">isNesFile,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isArFile
+      <li><a class="reference" href="#isArFile%2Cstring"
+    title="isArFile(file: string): bool">isArFile,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isZipFile
+      <li><a class="reference" href="#isZipFile%2Cstring"
+    title="isZipFile(file: string): bool">isZipFile,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isElfFile
+      <li><a class="reference" href="#isElfFile%2Cstring"
+    title="isElfFile(file: string): bool">isElfFile,<wbr>string</a></li>
+
+  </ul>
+
+  </ul>
+</li>
+<li>
   <a class="reference reference-toplevel" href="#13" id="63">Funcs</a>
   <ul class="simple simple-toc-section">
       <ul class="simple nested-toc-section">isAr
@@ -592,6 +683,181 @@ function main() {
 </dd>
 
 </dl></div>
+<div class="section" id="12">
+<h1><a class="toc-backref" href="#12">Procs</a></h1>
+<dl class="item">
+<a id="isGzFile,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isGzFile%2Cstring"><span class="Identifier">isGzFile</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Identifier">ReadDirEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<p>Returns that the <tt class="docutils literal"><span class="pre">file</span></tt> is Gz format file or not.</p>
+<p><strong>Note:</strong> Not available for JS backend.</p>
+
+
+</dd>
+<a id="isBz2File,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isBz2File%2Cstring"><span class="Identifier">isBz2File</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Identifier">ReadDirEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<p>Returns that the <tt class="docutils literal"><span class="pre">file</span></tt> is Bz2 format file or not.</p>
+<p><strong>Note:</strong> Not available for JS backend.</p>
+
+
+</dd>
+<a id="is7zFile,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#is7zFile%2Cstring"><span class="Identifier">is7zFile</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Identifier">ReadDirEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<p>Returns that the <tt class="docutils literal"><span class="pre">file</span></tt> is 7z format file or not.</p>
+<p><strong>Note:</strong> Not available for JS backend.</p>
+
+
+</dd>
+<a id="isPdfFile,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isPdfFile%2Cstring"><span class="Identifier">isPdfFile</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Identifier">ReadDirEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<p>Returns that the <tt class="docutils literal"><span class="pre">file</span></tt> is Pdf format file or not.</p>
+<p><strong>Note:</strong> Not available for JS backend.</p>
+
+
+</dd>
+<a id="isExeFile,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isExeFile%2Cstring"><span class="Identifier">isExeFile</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Identifier">ReadDirEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<p>Returns that the <tt class="docutils literal"><span class="pre">file</span></tt> is Exe format file or not.</p>
+<p><strong>Note:</strong> Not available for JS backend.</p>
+
+
+</dd>
+<a id="isRtfFile,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isRtfFile%2Cstring"><span class="Identifier">isRtfFile</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Identifier">ReadDirEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<p>Returns that the <tt class="docutils literal"><span class="pre">file</span></tt> is Rtf format file or not.</p>
+<p><strong>Note:</strong> Not available for JS backend.</p>
+
+
+</dd>
+<a id="isNesFile,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isNesFile%2Cstring"><span class="Identifier">isNesFile</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Identifier">ReadDirEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<p>Returns that the <tt class="docutils literal"><span class="pre">file</span></tt> is Nes format file or not.</p>
+<p><strong>Note:</strong> Not available for JS backend.</p>
+
+
+</dd>
+<a id="isCrxFile,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isCrxFile%2Cstring"><span class="Identifier">isCrxFile</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Identifier">ReadDirEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<p>Returns that the <tt class="docutils literal"><span class="pre">file</span></tt> is Crx format file or not.</p>
+<p><strong>Note:</strong> Not available for JS backend.</p>
+
+
+</dd>
+<a id="isPsFile,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isPsFile%2Cstring"><span class="Identifier">isPsFile</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Identifier">ReadDirEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<p>Returns that the <tt class="docutils literal"><span class="pre">file</span></tt> is Ps format file or not.</p>
+<p><strong>Note:</strong> Not available for JS backend.</p>
+
+
+</dd>
+<a id="isXzFile,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isXzFile%2Cstring"><span class="Identifier">isXzFile</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Identifier">ReadDirEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<p>Returns that the <tt class="docutils literal"><span class="pre">file</span></tt> is Xz format file or not.</p>
+<p><strong>Note:</strong> Not available for JS backend.</p>
+
+
+</dd>
+<a id="isSqliteFile,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isSqliteFile%2Cstring"><span class="Identifier">isSqliteFile</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Identifier">ReadDirEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<p>Returns that the <tt class="docutils literal"><span class="pre">file</span></tt> is Sqlite format file or not.</p>
+<p><strong>Note:</strong> Not available for JS backend.</p>
+
+
+</dd>
+<a id="isDebFile,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isDebFile%2Cstring"><span class="Identifier">isDebFile</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Identifier">ReadDirEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<p>Returns that the <tt class="docutils literal"><span class="pre">file</span></tt> is Deb format file or not.</p>
+<p><strong>Note:</strong> Not available for JS backend.</p>
+
+
+</dd>
+<a id="isArFile,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isArFile%2Cstring"><span class="Identifier">isArFile</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Identifier">ReadDirEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<p>Returns that the <tt class="docutils literal"><span class="pre">file</span></tt> is Ar format file or not.</p>
+<p><strong>Note:</strong> Not available for JS backend.</p>
+
+
+</dd>
+<a id="isLzFile,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isLzFile%2Cstring"><span class="Identifier">isLzFile</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Identifier">ReadDirEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<p>Returns that the <tt class="docutils literal"><span class="pre">file</span></tt> is Lz format file or not.</p>
+<p><strong>Note:</strong> Not available for JS backend.</p>
+
+
+</dd>
+<a id="isRpmFile,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isRpmFile%2Cstring"><span class="Identifier">isRpmFile</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Identifier">ReadDirEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<p>Returns that the <tt class="docutils literal"><span class="pre">file</span></tt> is Rpm format file or not.</p>
+<p><strong>Note:</strong> Not available for JS backend.</p>
+
+
+</dd>
+<a id="isElfFile,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isElfFile%2Cstring"><span class="Identifier">isElfFile</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Identifier">ReadDirEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<p>Returns that the <tt class="docutils literal"><span class="pre">file</span></tt> is Elf format file or not.</p>
+<p><strong>Note:</strong> Not available for JS backend.</p>
+
+
+</dd>
+<a id="isZipFile,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isZipFile%2Cstring"><span class="Identifier">isZipFile</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Identifier">ReadDirEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<p>Returns that the <tt class="docutils literal"><span class="pre">file</span></tt> is Zip format file or not.</p>
+<p><strong>Note:</strong> Not available for JS backend.</p>
+
+
+</dd>
+
+</dl></div>
 <div class="section" id="13">
 <h1><a class="toc-backref" href="#13">Funcs</a></h1>
 <dl class="item">
@@ -724,7 +990,7 @@ Returns <tt class="docutils literal"><span class="pre">buf</span></tt> matches E
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-01-21 15:21:27 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-01-23 05:05:43 UTC</small>
       </div>
     </div>
   </div>

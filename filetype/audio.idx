@@ -7,10 +7,17 @@ typeWav	filetype/audio.html#typeWav	audio: typeWav
 typeAmr	filetype/audio.html#typeAmr	audio: typeAmr	
 typeAac	filetype/audio.html#typeAac	audio: typeAac	
 isMp3	filetype/audio.html#isMp3,openArray[byte]	audio: isMp3(buf: openArray[byte]): bool	
+isMp3File	filetype/audio.html#isMp3File,string	audio: isMp3File(file: string): bool	
 isAac	filetype/audio.html#isAac,openArray[byte]	audio: isAac(buf: openArray[byte]): bool	
+isAacFile	filetype/audio.html#isAacFile,string	audio: isAacFile(file: string): bool	
 isWav	filetype/audio.html#isWav,openArray[byte]	audio: isWav(buf: openArray[byte]): bool	
+isWavFile	filetype/audio.html#isWavFile,string	audio: isWavFile(file: string): bool	
 isMidi	filetype/audio.html#isMidi	audio: isMidi(buf: openArray[byte]): bool	
+isMidiFile	filetype/audio.html#isMidiFile,string	audio: isMidiFile(file: string): bool	
 isOgg	filetype/audio.html#isOgg	audio: isOgg(buf: openArray[byte]): bool	
+isOggFile	filetype/audio.html#isOggFile,string	audio: isOggFile(file: string): bool	
 isFlac	filetype/audio.html#isFlac	audio: isFlac(buf: openArray[byte]): bool	
+isFlacFile	filetype/audio.html#isFlacFile,string	audio: isFlacFile(file: string): bool	
 isAmr	filetype/audio.html#isAmr	audio: isAmr(buf: openArray[byte]): bool	
+isAmrFile	filetype/audio.html#isAmrFile,string	audio: isAmrFile(file: string): bool	
 audioMatcher	filetype/audio.html#audioMatcher	audio: audioMatcher	

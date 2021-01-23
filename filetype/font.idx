@@ -3,7 +3,11 @@ typeWoff2	filetype/font.html#typeWoff2	font: typeWoff2
 typeTtf	filetype/font.html#typeTtf	font: typeTtf	
 typeOtf	filetype/font.html#typeOtf	font: typeOtf	
 isWoff	filetype/font.html#isWoff	font: isWoff(buf: openArray[byte]): bool	
+isWoffFile	filetype/font.html#isWoffFile,string	font: isWoffFile(file: string): bool	
 isWoff2	filetype/font.html#isWoff2	font: isWoff2(buf: openArray[byte]): bool	
+isWoff2File	filetype/font.html#isWoff2File,string	font: isWoff2File(file: string): bool	
 isTtf	filetype/font.html#isTtf	font: isTtf(buf: openArray[byte]): bool	
+isTtfFile	filetype/font.html#isTtfFile,string	font: isTtfFile(file: string): bool	
 isOtf	filetype/font.html#isOtf	font: isOtf(buf: openArray[byte]): bool	
+isOtfFile	filetype/font.html#isOtfFile,string	font: isOtfFile(file: string): bool	
 fontMatcher	filetype/font.html#fontMatcher	font: fontMatcher	

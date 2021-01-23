@@ -9,8 +9,13 @@ typeMpeg	filetype/video.html#typeMpeg	video: typeMpeg
 typeFlv	filetype/video.html#typeFlv	video: typeFlv	
 type3gp	filetype/video.html#type3gp	video: type3gp	
 isWmv	filetype/video.html#isWmv	video: isWmv(buf: openArray[byte]): bool	
+isWmvFile	filetype/video.html#isWmvFile,string	video: isWmvFile(file: string): bool	
 isFlv	filetype/video.html#isFlv	video: isFlv(buf: openArray[byte]): bool	
+isFlvFile	filetype/video.html#isFlvFile,string	video: isFlvFile(file: string): bool	
 isAvi	filetype/video.html#isAvi,openArray[byte]	video: isAvi(buf: openArray[byte]): bool	
+isAviFile	filetype/video.html#isAviFile,string	video: isAviFile(file: string): bool	
 isMpeg	filetype/video.html#isMpeg,openArray[byte]	video: isMpeg(buf: openArray[byte]): bool	
+isMpegFile	filetype/video.html#isMpegFile,string	video: isMpegFile(file: string): bool	
 isMp4	filetype/video.html#isMp4,openArray[byte]	video: isMp4(buf: openArray[byte]): bool	
+isMp4File	filetype/video.html#isMp4File,string	video: isMp4File(file: string): bool	
 videoMatcher	filetype/video.html#videoMatcher	video: videoMatcher	

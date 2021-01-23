@@ -26,20 +26,37 @@ typeDcm	filetype/archive.html#typeDcm	archive: typeDcm
 typeIso	filetype/archive.html#typeIso	archive: typeIso	
 typeMachO	filetype/archive.html#typeMachO	archive: typeMachO	
 isGz	filetype/archive.html#isGz	archive: isGz(buf: openArray[byte]): bool	
+isGzFile	filetype/archive.html#isGzFile,string	archive: isGzFile(file: string): bool	
 isBz2	filetype/archive.html#isBz2	archive: isBz2(buf: openArray[byte]): bool	
+isBz2File	filetype/archive.html#isBz2File,string	archive: isBz2File(file: string): bool	
 is7z	filetype/archive.html#is7z	archive: is7z(buf: openArray[byte]): bool	
+is7zFile	filetype/archive.html#is7zFile,string	archive: is7zFile(file: string): bool	
 isPdf	filetype/archive.html#isPdf	archive: isPdf(buf: openArray[byte]): bool	
+isPdfFile	filetype/archive.html#isPdfFile,string	archive: isPdfFile(file: string): bool	
 isExe	filetype/archive.html#isExe	archive: isExe(buf: openArray[byte]): bool	
+isExeFile	filetype/archive.html#isExeFile,string	archive: isExeFile(file: string): bool	
 isRtf	filetype/archive.html#isRtf	archive: isRtf(buf: openArray[byte]): bool	
+isRtfFile	filetype/archive.html#isRtfFile,string	archive: isRtfFile(file: string): bool	
 isNes	filetype/archive.html#isNes	archive: isNes(buf: openArray[byte]): bool	
+isNesFile	filetype/archive.html#isNesFile,string	archive: isNesFile(file: string): bool	
 isCrx	filetype/archive.html#isCrx	archive: isCrx(buf: openArray[byte]): bool	
+isCrxFile	filetype/archive.html#isCrxFile,string	archive: isCrxFile(file: string): bool	
 isPs	filetype/archive.html#isPs	archive: isPs(buf: openArray[byte]): bool	
+isPsFile	filetype/archive.html#isPsFile,string	archive: isPsFile(file: string): bool	
 isXz	filetype/archive.html#isXz	archive: isXz(buf: openArray[byte]): bool	
+isXzFile	filetype/archive.html#isXzFile,string	archive: isXzFile(file: string): bool	
 isSqlite	filetype/archive.html#isSqlite	archive: isSqlite(buf: openArray[byte]): bool	
+isSqliteFile	filetype/archive.html#isSqliteFile,string	archive: isSqliteFile(file: string): bool	
 isDeb	filetype/archive.html#isDeb	archive: isDeb(buf: openArray[byte]): bool	
+isDebFile	filetype/archive.html#isDebFile,string	archive: isDebFile(file: string): bool	
 isAr	filetype/archive.html#isAr	archive: isAr(buf: openArray[byte]): bool	
+isArFile	filetype/archive.html#isArFile,string	archive: isArFile(file: string): bool	
 isLz	filetype/archive.html#isLz	archive: isLz(buf: openArray[byte]): bool	
+isLzFile	filetype/archive.html#isLzFile,string	archive: isLzFile(file: string): bool	
 isRpm	filetype/archive.html#isRpm	archive: isRpm(buf: openArray[byte]): bool	
+isRpmFile	filetype/archive.html#isRpmFile,string	archive: isRpmFile(file: string): bool	
 isElf	filetype/archive.html#isElf	archive: isElf(buf: openArray[byte]): bool	
+isElfFile	filetype/archive.html#isElfFile,string	archive: isElfFile(file: string): bool	
 isZip	filetype/archive.html#isZip,openArray[byte]	archive: isZip(buf: openArray[byte]): bool	
+isZipFile	filetype/archive.html#isZipFile,string	archive: isZipFile(file: string): bool	
 archiveMatcher	filetype/archive.html#archiveMatcher	archive: archiveMatcher	
