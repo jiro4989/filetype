@@ -55,3 +55,15 @@ suite "proc matchFile":
 
   # others
   test "returns empty when a file doesn't exist": check matchFile("hello.world").mime.value == ""
+
+suite "proc isXXXFile":
+  # image
+  test "image: jpg": check isJpegFile(sampleFile("jpeg"))
+  test "image: png": check isPngFile(sampleFile("png"))
+  # archive
+  test "archive: gzip": check isGZFile(sampleFile("gz"))
+  test "archive: zip": check isZipFile(sampleFile("zip"))
+  # audio
+  test "audio: wav": check isWavFile(sampleFile("wav"))
+  # video
+  test "video: mp4": check isMp4File(sampleFile("mp4"))
