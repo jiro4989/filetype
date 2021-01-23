@@ -43,10 +43,12 @@ generateFunc Dwg
 
 func isGif*(buf: openArray[byte]): bool =
   checkMagicNumber(buf, magicNumberGif87a) or checkMagicNumber(buf, magicNumberGif89a)
+generateFileFunc Gif
 
 func isWebp*(buf: openArray[byte]): bool =
   return 11 < buf.len and
     buf[8..11] == @[0x57'u8, 0x45, 0x42, 0x50]
+generateFileFunc Webp
 
 func isCr2AndTiffPrefix(buf: openArray[byte]): bool =
   return (buf[0..3] == @[0x49'u8, 0x49, 0x2a, 0x0]) or
@@ -56,11 +58,13 @@ func isCr2*(buf: openArray[byte]): bool =
   return 10 < buf.len and
     buf.isCr2AndTiffPrefix and
     buf[8..10] == @[0x43'u8, 0x52, 0x02]
+generateFileFunc Cr2
 
 func isTiff*(buf: openArray[byte]): bool =
   return 10 < buf.len and
     buf.isCr2AndTiffPrefix and
     not buf.isCr2
+generateFileFunc Tiff
 
 const
   imageMatcher* = @[

@@ -27,12 +27,14 @@ func isAvi*(buf: openArray[byte]): bool =
     buf[8] == 0x41 and
     buf[9] == 0x56 and
     buf[10] == 0x49
+generateFileFunc Avi
 
 func isMpeg*(buf: openArray[byte]): bool =
   return 3 < buf.len and
     buf[0] == 0x0 and buf[1] == 0x0 and
     buf[2] == 0x1 and buf[3] >= 0xb0 and
     buf[3] <= 0xbf
+generateFileFunc Mpeg
 
 func isMp4*(buf: openArray[byte]): bool =
   return 11 < buf.len and
@@ -65,6 +67,7 @@ func isMp4*(buf: openArray[byte]): bool =
       (buf[8] == 'N'.byte and buf[9] == 'D'.byte and buf[10] == 'X'.byte and buf[11] == 'S'.byte) or
       (buf[8] == 'F'.byte and buf[9] == '4'.byte and buf[10] == 'V'.byte and buf[11] == ' '.byte) or
       (buf[8] == 'F'.byte and buf[9] == '4'.byte and buf[10] == 'P'.byte and buf[11] == ' '.byte))
+generateFileFunc Mp4
 
 const
   videoMatcher* = @[

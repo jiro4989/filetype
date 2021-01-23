@@ -1,5 +1,5 @@
 import filetype/[types, image, archive, audio, font, video]
-export types
+export types, image, archive, audio, font, video
 
 proc match*(buf: openArray[byte]): FileType =
   ## Returns a file type from matched magic number.
@@ -18,9 +18,8 @@ proc match*(buf: openArray[byte]): FileType =
         return matcher[0]
 
 when not defined js:
-  import streams
-  from os import getFileSize, fileExists
-  from sequtils import newSeqWith
+  import filetype/private/util
+  from os import fileExists
 
   proc matchFile*(file: string): FileType =
     ## Returns a file type from matched magic number.
@@ -28,16 +27,4 @@ when not defined js:
     ##
     ## **Note:** Not available for JS backend.
     if not fileExists(file): return
-
-    const maxSize = 1024
-    let fileSize = file.getFileSize()
-    let size =
-      if fileSize < maxSize: fileSize.int
-      else: maxSize
-
-    var strm = openFileStream(file)
-    defer: strm.close()
-    var buf = newSeqWith(size, 0'u8)
-    for i in 0..<size:
-      buf[i] = strm.readUint8()
-    return buf.match()
+    return readMagicNubmer(file).match()

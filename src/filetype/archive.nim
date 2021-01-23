@@ -69,6 +69,7 @@ func isZip*(buf: openArray[byte]): bool =
            buf[1] == 0x4b'u8 and
            buf[2] in @[0x3'u8, 0x5, 0x7] and
            buf[3] in @[0x4'u8, 0x6, 0x8]
+generateFileFunc Zip
 
 const
   archiveMatcher* = @[
