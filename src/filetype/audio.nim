@@ -17,9 +17,11 @@ const
 
 func isMp3*(buf: openArray[byte]): bool =
   checkMagicNumber(buf, @[0x49'u8, 0x44, 0x33]) or checkMagicNumber(buf, @[0xff'u8, 0xfb])
+generateFileFunc Mp3
 
 func isAac*(buf: openArray[byte]): bool =
   checkMagicNumber(buf, @[0xff'u8, 0xf1]) or checkMagicNumber(buf, @[0xff'u8, 0xf9])
+generateFileFunc Aac
 
 func isWav*(buf: openArray[byte]): bool =
   #magicNumberWav = @[0x52'u8, 0x49, 0x46, 0x46, 0x57, 0x41, 0x56, 0x45]
@@ -32,6 +34,7 @@ func isWav*(buf: openArray[byte]): bool =
            buf[9] == 0x41'u8 and
            buf[10] == 0x56'u8 and
            buf[11] == 0x45'u8
+generateFileFunc Wav
 
 generateFunc Midi
 generateFunc Ogg
