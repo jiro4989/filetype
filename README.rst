@@ -16,8 +16,10 @@ Usage
 
    import filetype
 
-   echo matchFile("sample.png").mime.value
-   # -> image/png
+   doAssert matchFile("tests/testdata/sample.png").mime.value == "image/png"
+   doAssert isPngFile("tests/testdata/sample.png")
+   if isZipFile("tests/testdata/sample.zip"):
+     echo "file is zip"
 
 Installation
 ============
