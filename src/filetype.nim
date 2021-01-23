@@ -1,5 +1,5 @@
 import filetype/[types, image, archive, audio, font, video]
-export types
+export types, image, archive, audio, font, video
 
 proc match*(buf: openArray[byte]): FileType =
   ## Returns a file type from matched magic number.
