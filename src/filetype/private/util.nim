@@ -39,6 +39,7 @@ macro generateFunc*(format: untyped): untyped =
 
     readFileFuncName = newIdentNode("is" & $format & "File")
     fileArg = newIdentNode("file")
+    fileComment = newCommentStmtNode(&"Returns that the `file` is {format} format file or not.")
 
   quote do:
     func `funcName`*(`arg`: openArray[byte]): bool =
@@ -47,4 +48,5 @@ macro generateFunc*(format: untyped): untyped =
 
     when not defined js:
       proc `readFileFuncName`*(`fileArg`: string): bool =
+        `fileComment`
         readMagicNubmer(`fileArg`).`funcName`()
