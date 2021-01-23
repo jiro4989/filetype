@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.8.1"
+version       = "0.9.0"
 author        = "jiro4989"
 description   = "Small and dependency free Nim package to infer file and MIME type checking the magic numbers signature."
 license       = "MIT"
