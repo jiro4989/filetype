@@ -12,4 +12,6 @@ srcDir        = "src"
 requires "nim >= 1.4.0"
 
 task docs, "generate documents":
-  selfExec "doc --index:on --project --out:documents src/filetype.nim"
+  let docDir = ".docs"
+  selfExec "doc --index:on --project --out:" & docDir & " src/filetype.nim"
+  rmDir docDir

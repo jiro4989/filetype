@@ -31,5 +31,6 @@ jobs:
       - uses: jiro4989/setup-nim-action@v1
         with:
           nim-version: ${{ matrix.nim-version }}
-      - run: nimble test -Y
       - run: nimble install -Y
+      - run: nimble test -Y
+      - run: nimble docs
