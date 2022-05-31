@@ -1,5 +1,16 @@
-import filetype/[types, image, archive, audio, font, video]
-export types, image, archive, audio, font, video
+import filetype/types
+import filetype/archive
+import filetype/audio
+import filetype/font
+import filetype/image
+import filetype/video
+
+export types
+export archive
+export audio
+export font
+export image
+export video
 
 const allMatchers = @[imageMatcher, archiveMatcher, audioMatcher, fontMatcher, videoMatcher]
 
