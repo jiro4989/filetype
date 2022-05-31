@@ -21,6 +21,11 @@ Usage
    if isZipFile("tests/testdata/sample.zip"):
      echo "file is zip"
 
+API documents
+=============
+
+See `filetype module <https://jiro4989.github.io/filetype/filetype.html>`_.
+
 Installation
 ============
 
