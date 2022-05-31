@@ -2,10 +2,10 @@ import types
 import private/util
 
 const
-  typeWoff*  = newFileType("application/font-woff", "woff")
+  typeWoff* = newFileType("application/font-woff", "woff")
   typeWoff2* = newFileType("application/font-woff", "woff2")
-  typeTtf*   = newFileType("application/font-sfnt", "ttf")
-  typeOtf*   = newFileType("application/font-sfnt", "otf")
+  typeTtf* = newFileType("application/font-sfnt", "ttf")
+  typeOtf* = newFileType("application/font-sfnt", "otf")
 
   magicNumberWoff = @[0x77'u8, 0x4f, 0x46, 0x46, 0x00, 0x01, 0x00, 0x00]
   magicNumberWoff2 = @[0x77'u8, 0x4f, 0x46, 0x32, 0x00, 0x01, 0x00, 0x00]

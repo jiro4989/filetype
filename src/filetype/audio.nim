@@ -17,7 +17,8 @@ const
   magicNumberAmr = @[0x23'u8, 0x21, 0x41, 0x4d, 0x52, 0x0a]
 
 func isMp3*(buf: openArray[byte]): bool =
-  checkMagicNumber(buf, @[0x49'u8, 0x44, 0x33]) or checkMagicNumber(buf, @[0xff'u8, 0xfb])
+  checkMagicNumber(buf, @[0x49'u8, 0x44, 0x33]) or checkMagicNumber(buf, @[
+      0xff'u8, 0xfb])
 generateFileFunc Mp3
 
 func isAac*(buf: openArray[byte]): bool =
