@@ -20,6 +20,8 @@ const
   typeIco* = newFileType("image/vnd.microsoft.icon", "ico")
   typeHeif* = newFileType("image/heif", "heif")
   typeDwg* = newFileType("image/vnd.dwg", "dwg")
+  typePdf* = newFileType("application/pdf", "pdf")
+  typeAi* = newFileType("application/illustrator", "ai")
 
   magicNumberJpeg = @[0xff'u8, 0xd8, 0xff]
   magicNumberJpeg2000 = @[0x0'u8, 0x0, 0x0, 0xc, 0x6a, 0x50, 0x20, 0x20, 0xd, 0xa, 0x87, 0xa, 0x0]
@@ -31,6 +33,8 @@ const
   magicNumberPsd = @[0x38'u8, 0x42, 0x50, 0x53]
   magicNumberIco = @[0x00'u8, 0x00, 0x01, 0x00]
   magicNumberDwg = @[0x41'u8, 0x43, 0x31, 0x30]
+  magicNumberPdf = @[0x25'u8, 0x50, 0x44, 0x46, 0x2D]
+  magicNumberAi = @[0x25'u8, 0x50, 0x44, 0x46]
 
 generateFunc Jpeg
 generateFunc Jpeg2000
@@ -40,6 +44,8 @@ generateFunc Jxr
 generateFunc Psd
 generateFunc Ico
 generateFunc Dwg
+generateFunc Pdf
+generateFunc Ai
 
 func isGif*(buf: openArray[byte]): bool =
   checkMagicNumber(buf, magicNumberGif87a) or checkMagicNumber(buf, magicNumberGif89a)
@@ -80,5 +86,6 @@ const
     (typePsd, isPsd),
     (typeIco, isIco),
     (typeDwg, isDwg),
+    (typePdf, isPdf),
+    (typeAi, isAi)
   ]
-
