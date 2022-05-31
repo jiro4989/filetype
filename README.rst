@@ -15,11 +15,27 @@ Usage
 .. code-block:: nim
 
    import filetype
-
+   let content = readFile("tests/testdata/sample.png")
+   doAssert match(content).extension == "png"
    doAssert matchFile("tests/testdata/sample.png").mime.value == "image/png"
    doAssert isPngFile("tests/testdata/sample.png")
    if isZipFile("tests/testdata/sample.zip"):
      echo "file is zip"
+
+Types
+=============
+
+.. code-block:: nim
+
+   type
+      FileType* = object
+         mime*: Mime
+         extension*: string ## File extension. (ex: `zip`)
+      Mime* = object
+         ## MIME type.
+         typ*: string     ## Ex: `application` of `application/gzip`.
+         subType*: string ## Ex: `gzip` of `application/gzip`.
+         value*: string   ## Ex: `application/gzip` of `application/gzip`.
 
 API documents
 =============
