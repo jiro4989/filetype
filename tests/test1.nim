@@ -10,13 +10,14 @@ const
 func sampleFile(ext: string): string =
   return testDataDir/"sample." & ext
 
-suite "allMatchers must not be duplicated":
-  var items: seq[FileType]
-  for matcher in allMatchers:
-    for item in matcher:
-      items.add(item[0])
-  let dep = items.deduplicate()
-  check items.len == dep.len
+suite "allMatchers":
+  test "must not be duplicated":
+    var items: seq[FileType]
+    for matcher in allMatchers:
+      for item in matcher:
+        items.add(item[0])
+    let dep = items.deduplicate()
+    check items.len == dep.len
 
 suite "proc matchFile":
   # image
