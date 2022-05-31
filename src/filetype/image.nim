@@ -4,7 +4,8 @@
 ## * https://en.wikipedia.org/wiki/BMP_file_format "BM"
 ## * https://en.wikipedia.org/wiki/JPEG_XR 
 
-import types, private/util
+import types
+import private/util
 
 const
   typeJpeg* = newFileType("image/jpeg", "jpg")
