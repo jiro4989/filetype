@@ -1,4 +1,6 @@
-import unittest, os, sequtils
+import std/unittest
+import std/os
+import std/sequtils
 
 include filetype
 
