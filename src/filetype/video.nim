@@ -39,64 +39,157 @@ generateFileFunc Mpeg
 
 func isMp4*(buf: openArray[byte]): bool =
   return 11 < buf.len and
-    (buf[4] == 'f'.byte and buf[5] == 't'.byte and buf[6] == 'y'.byte and buf[
-        7] == 'p'.byte) and
-    ((buf[8] == 'a'.byte and buf[9] == 'v'.byte and buf[10] == 'c'.byte and buf[
-        11] == '1'.byte) or
-      (buf[8] == 'd'.byte and buf[9] == 'a'.byte and buf[10] == 's'.byte and
-          buf[11] == 'h'.byte) or
-      (buf[8] == 'i'.byte and buf[9] == 's'.byte and buf[10] == 'o'.byte and
-          buf[11] == '2'.byte) or
-      (buf[8] == 'i'.byte and buf[9] == 's'.byte and buf[10] == 'o'.byte and
-          buf[11] == '3'.byte) or
-      (buf[8] == 'i'.byte and buf[9] == 's'.byte and buf[10] == 'o'.byte and
-          buf[11] == '4'.byte) or
-      (buf[8] == 'i'.byte and buf[9] == 's'.byte and buf[10] == 'o'.byte and
-          buf[11] == '5'.byte) or
-      (buf[8] == 'i'.byte and buf[9] == 's'.byte and buf[10] == 'o'.byte and
-          buf[11] == '6'.byte) or
-      (buf[8] == 'i'.byte and buf[9] == 's'.byte and buf[10] == 'o'.byte and
-          buf[11] == 'm'.byte) or
-      (buf[8] == 'm'.byte and buf[9] == 'm'.byte and buf[10] == 'p'.byte and
-          buf[11] == '4'.byte) or
-      (buf[8] == 'm'.byte and buf[9] == 'p'.byte and buf[10] == '4'.byte and
-          buf[11] == '1'.byte) or
-      (buf[8] == 'm'.byte and buf[9] == 'p'.byte and buf[10] == '4'.byte and
-          buf[11] == '2'.byte) or
-      (buf[8] == 'm'.byte and buf[9] == 'p'.byte and buf[10] == '4'.byte and
-          buf[11] == 'v'.byte) or
-      (buf[8] == 'm'.byte and buf[9] == 'p'.byte and buf[10] == '7'.byte and
-          buf[11] == '1'.byte) or
-      (buf[8] == 'M'.byte and buf[9] == 'S'.byte and buf[10] == 'N'.byte and
-          buf[11] == 'V'.byte) or
-      (buf[8] == 'N'.byte and buf[9] == 'D'.byte and buf[10] == 'A'.byte and
-          buf[11] == 'S'.byte) or
-      (buf[8] == 'N'.byte and buf[9] == 'D'.byte and buf[10] == 'S'.byte and
-          buf[11] == 'C'.byte) or
-      (buf[8] == 'N'.byte and buf[9] == 'S'.byte and buf[10] == 'D'.byte and
-          buf[11] == 'C'.byte) or
-      (buf[8] == 'N'.byte and buf[9] == 'D'.byte and buf[10] == 'S'.byte and
-          buf[11] == 'H'.byte) or
-      (buf[8] == 'N'.byte and buf[9] == 'D'.byte and buf[10] == 'S'.byte and
-          buf[11] == 'M'.byte) or
-      (buf[8] == 'N'.byte and buf[9] == 'D'.byte and buf[10] == 'S'.byte and
-          buf[11] == 'P'.byte) or
-      (buf[8] == 'N'.byte and buf[9] == 'D'.byte and buf[10] == 'S'.byte and
-          buf[11] == 'S'.byte) or
-      (buf[8] == 'N'.byte and buf[9] == 'D'.byte and buf[10] == 'X'.byte and
-          buf[11] == 'C'.byte) or
-      (buf[8] == 'N'.byte and buf[9] == 'D'.byte and buf[10] == 'X'.byte and
-          buf[11] == 'H'.byte) or
-      (buf[8] == 'N'.byte and buf[9] == 'D'.byte and buf[10] == 'X'.byte and
-          buf[11] == 'M'.byte) or
-      (buf[8] == 'N'.byte and buf[9] == 'D'.byte and buf[10] == 'X'.byte and
-          buf[11] == 'P'.byte) or
-      (buf[8] == 'N'.byte and buf[9] == 'D'.byte and buf[10] == 'X'.byte and
-          buf[11] == 'S'.byte) or
-      (buf[8] == 'F'.byte and buf[9] == '4'.byte and buf[10] == 'V'.byte and
-          buf[11] == ' '.byte) or
-      (buf[8] == 'F'.byte and buf[9] == '4'.byte and buf[10] == 'P'.byte and
-          buf[11] == ' '.byte))
+    (
+      buf[4] == 'f'.byte and
+      buf[5] == 't'.byte and
+      buf[6] == 'y'.byte and
+      buf[7] == 'p'.byte
+    ) and
+    (
+      (
+        buf[8] == 'a'.byte and
+        buf[9] == 'v'.byte and
+        buf[10] == 'c'.byte and
+        buf[11] == '1'.byte
+      ) or (
+        buf[8] == 'd'.byte and
+        buf[9] == 'a'.byte and
+        buf[10] == 's'.byte and
+        buf[11] == 'h'.byte
+      ) or (
+        buf[8] == 'i'.byte and
+        buf[9] == 's'.byte and
+        buf[10] == 'o'.byte and
+        buf[11] == '2'.byte
+      ) or (
+        buf[8] == 'i'.byte and
+        buf[9] == 's'.byte and
+        buf[10] == 'o'.byte and
+        buf[11] == '3'.byte
+      ) or
+      (
+        buf[8] == 'i'.byte and
+        buf[9] == 's'.byte and
+        buf[10] == 'o'.byte and
+        buf[11] == '4'.byte
+      ) or (
+        buf[8] == 'i'.byte and
+        buf[9] == 's'.byte and
+        buf[10] == 'o'.byte and
+        buf[11] == '5'.byte
+      ) or (
+        buf[8] == 'i'.byte and
+        buf[9] == 's'.byte and
+        buf[10] == 'o'.byte and
+        buf[11] == '6'.byte
+      ) or (
+        buf[8] == 'i'.byte and
+        buf[9] == 's'.byte and
+        buf[10] == 'o'.byte and
+        buf[11] == 'm'.byte
+      ) or (
+        buf[8] == 'm'.byte and
+        buf[9] == 'm'.byte and
+        buf[10] == 'p'.byte and
+        buf[11] == '4'.byte
+      ) or (
+        buf[8] == 'm'.byte and
+        buf[9] == 'p'.byte and
+        buf[10] == '4'.byte and
+        buf[11] == '1'.byte
+      ) or (
+        buf[8] == 'm'.byte and
+        buf[9] == 'p'.byte and
+        buf[10] == '4'.byte and
+        buf[11] == '2'.byte
+      ) or (
+        buf[8] == 'm'.byte and
+        buf[9] == 'p'.byte and
+        buf[10] == '4'.byte and
+        buf[11] == 'v'.byte
+      ) or (
+        buf[8] == 'm'.byte and
+        buf[9] == 'p'.byte and
+        buf[10] == '7'.byte and
+        buf[11] == '1'.byte
+      ) or (
+        buf[8] == 'M'.byte and
+        buf[9] == 'S'.byte and
+        buf[10] == 'N'.byte and
+        buf[11] == 'V'.byte
+      ) or (
+        buf[8] == 'N'.byte and
+        buf[9] == 'D'.byte and
+        buf[10] == 'A'.byte and
+        buf[11] == 'S'.byte
+      ) or (
+        buf[8] == 'N'.byte and
+        buf[9] == 'D'.byte and
+        buf[10] == 'S'.byte and
+        buf[11] == 'C'.byte
+      ) or (
+        buf[8] == 'N'.byte and
+        buf[9] == 'S'.byte and
+        buf[10] == 'D'.byte and
+        buf[11] == 'C'.byte
+      ) or (
+        buf[8] == 'N'.byte and
+        buf[9] == 'D'.byte and
+        buf[10] == 'S'.byte and
+        buf[11] == 'H'.byte
+      ) or (
+        buf[8] == 'N'.byte and
+        buf[9] == 'D'.byte and
+        buf[10] == 'S'.byte and
+        buf[11] == 'M'.byte
+      ) or (
+        buf[8] == 'N'.byte and
+        buf[9] == 'D'.byte and
+        buf[10] == 'S'.byte and
+        buf[11] == 'P'.byte
+      ) or (
+        buf[8] == 'N'.byte and
+        buf[9] == 'D'.byte and
+        buf[10] == 'S'.byte and
+        buf[11] == 'S'.byte
+      ) or (
+        buf[8] == 'N'.byte and
+        buf[9] == 'D'.byte and
+        buf[10] == 'X'.byte and
+        buf[11] == 'C'.byte
+      ) or (
+        buf[8] == 'N'.byte and
+        buf[9] == 'D'.byte and
+        buf[10] == 'X'.byte and
+        buf[11] == 'H'.byte
+      ) or (
+        buf[8] == 'N'.byte and
+        buf[9] == 'D'.byte and
+        buf[10] == 'X'.byte and
+        buf[11] == 'M'.byte
+      ) or (
+        buf[8] == 'N'.byte and
+        buf[9] == 'D'.byte and
+        buf[10] == 'X'.byte and
+        buf[11] == 'P'.byte
+      ) or (
+        buf[8] == 'N'.byte and
+        buf[9] == 'D'.byte and
+        buf[10] == 'X'.byte and
+        buf[11] == 'S'.byte
+      ) or (
+        buf[8] == 'F'.byte and
+        buf[9] == '4'.byte and
+        buf[10] == 'V'.byte and
+        buf[11] == ' '.byte
+      ) or (
+        buf[8] == 'F'.byte and
+        buf[9] == '4'.byte and
+        buf[10] == 'P'.byte and
+        buf[11] == ' '.byte
+      )
+    )
+
 generateFileFunc Mp4
 
 const
