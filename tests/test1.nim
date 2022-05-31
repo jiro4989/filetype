@@ -1,4 +1,4 @@
-import unittest, os
+import unittest, os, sequtils
 
 include filetype
 
@@ -7,6 +7,14 @@ const
 
 func sampleFile(ext: string): string =
   return testDataDir/"sample." & ext
+
+suite "allMatchers must not be duplicated":
+  var items: seq[FileType]
+  for matcher in allMatchers:
+    for item in matcher:
+      items.add(item[0])
+  let dep = items.deduplicate()
+  check items.len == dep.len
 
 suite "proc matchFile":
   # image
@@ -54,7 +62,8 @@ suite "proc matchFile":
   test "video: mp4": check matchFile(sampleFile("mp4")).mime.value == "video/mp4"
 
   # others
-  test "returns empty when a file doesn't exist": check matchFile("hello.world").mime.value == ""
+  test "returns empty when a file doesn't exist": check matchFile(
+      "hello.world").mime.value == ""
 
 suite "proc isXXXFile":
   # image
