@@ -51,6 +51,16 @@ LICENSE
 
 MIT
 
+Reference
+=========
+
+* https://en.wikipedia.org/wiki/List_of_file_signatures
+* https://en.wikipedia.org/wiki/JPEG
+* https://en.wikipedia.org/wiki/Portable_Network_Graphics
+* https://en.wikipedia.org/wiki/GIF
+* https://en.wikipedia.org/wiki/BMP_file_format
+* https://en.wikipedia.org/wiki/JPEG_XR
+
 .. |gh-actions| image:: https://github.com/jiro4989/filetype/workflows/test/badge.svg
    :target: https://github.com/jiro4989/filetype/actions
 .. |nimble-version| image:: https://nimble.directory/ci/badges/filetype/version.svg
