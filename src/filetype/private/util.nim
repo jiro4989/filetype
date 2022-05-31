@@ -1,5 +1,6 @@
-from sequtils import toSeq, mapIt
-import macros, strformat
+from std/sequtils import toSeq, mapIt, newSeqWith
+import std/macros
+import std/strformat
 
 func checkMagicNumber*(buf, magicNumber: openArray[byte]): bool =
   if magicNumber.len <= buf.len:
@@ -10,9 +11,8 @@ func str2Bytes*(s: string): seq[byte] =
   toSeq(s.items).mapIt(it.byte)
 
 when not defined js:
-  import streams
-  from os import getFileSize, fileExists
-  from sequtils import newSeqWith
+  import std/streams
+  from std/os import getFileSize, fileExists
 
   proc readMagicNubmer*(file: string): seq[byte] =
     if not fileExists(file): return
