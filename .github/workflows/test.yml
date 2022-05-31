@@ -24,6 +24,8 @@ jobs:
         nim-version:
           - stable
           - 1.4.0
+          - 1.4.x
+          - 1.6.x
     steps:
       - uses: actions/checkout@v1
       - uses: jiro4989/setup-nim-action@v1
