@@ -2,7 +2,7 @@
 filetype
 ====
 
-|nimble-version| |nimble-install| |gh-actions|
+|gh-actions|
 
 Small and dependency free Nim package to infer file and MIME type checking the magic numbers signature.
 filetype is heavily inspired by `h2non/filetype <https://github.com/h2non/filetype>`_.
@@ -79,7 +79,3 @@ Reference
 
 .. |gh-actions| image:: https://github.com/jiro4989/filetype/workflows/test/badge.svg
    :target: https://github.com/jiro4989/filetype/actions
-.. |nimble-version| image:: https://nimble.directory/ci/badges/filetype/version.svg
-   :target: https://nimble.directory/ci/badges/filetype/nimdevel/output.html
-.. |nimble-install| image:: https://nimble.directory/ci/badges/filetype/nimdevel/status.svg
-   :target: https://nimble.directory/ci/badges/filetype/nimdevel/output.html
